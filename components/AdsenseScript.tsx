@@ -4,10 +4,12 @@ import { useEffect } from "react";
 
 export default function AdsenseScript() {
   useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
-      console.error("Adsbygoogle error:", err);
+    // 檢查 adsbygoogle 是否存在並初始化廣告
+    if (
+      (window as any).adsbygoogle &&
+      Array.isArray((window as any).adsbygoogle)
+    ) {
+      (window as any).adsbygoogle.push({});
     }
   }, []);
 
