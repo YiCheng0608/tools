@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "免費在線工具",
+    "description": "提供計算器、計時器、顏色選擇器等免費在線工具，簡單易用。",
+    "keywords": "在線工具,計算器,計時器,顏色選擇器,免費工具"
+  },
+  "nav": {
+    "home": "首頁",
+    "calculator": "計算器",
+    "timer": "計時器",
+    "colorPicker": "顏色選擇器"
+  },
+  "widgets": {
+    "calculator": {
+      "title": "簡易計算器",
+      "description": "免費的在線基礎計算器"
+    },
+    "timer": {
+      "title": "倒計時器",
+      "description": "簡單的任務倒計時工具"
+    },
+    "colorPicker": {
+      "title": "顏色選擇器",
+      "description": "在不同格式間轉換顏色"
+    }
+  }
+}

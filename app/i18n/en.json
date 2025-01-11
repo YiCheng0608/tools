@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Free Online Tools",
+    "description": "Free online tools including calculator, timer, and color picker. Simple and easy to use.",
+    "keywords": "online tools, calculator, timer, color picker, free tools"
+  },
+  "nav": {
+    "home": "Home",
+    "calculator": "Calculator",
+    "timer": "Timer",
+    "colorPicker": "Color Picker"
+  },
+  "widgets": {
+    "calculator": {
+      "title": "Simple Calculator",
+      "description": "A free online calculator for basic arithmetic operations"
+    },
+    "timer": {
+      "title": "Countdown Timer",
+      "description": "Simple countdown timer for your daily tasks"
+    },
+    "colorPicker": {
+      "title": "Color Picker",
+      "description": "Pick and convert colors between different formats"
+    }
+  }
+}
