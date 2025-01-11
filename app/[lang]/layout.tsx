@@ -55,15 +55,20 @@ export default function RootLayout({ children, params: { lang } }: Props) {
               <div className="bg-gray-100 h-full flex items-center justify-center">
                 <script
                   async
-                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                  src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
+                  crossOrigin="anonymous"
                 ></script>
                 <ins
                   className="adsbygoogle"
                   style={{ display: "block" }}
                   data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
-                  data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR}
-                  data-ad-format="vertical"
+                  data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
                 ></ins>
+                <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
               </div>
             </div>
 
@@ -77,15 +82,20 @@ export default function RootLayout({ children, params: { lang } }: Props) {
               <div className="bg-gray-100 h-full flex items-center justify-center">
                 <script
                   async
-                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                  src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
+                  crossOrigin="anonymous"
                 ></script>
                 <ins
                   className="adsbygoogle"
                   style={{ display: "block" }}
                   data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
-                  data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR}
-                  data-ad-format="vertical"
+                  data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
+                  data-ad-format="auto"
+                  data-full-width-responsive="true"
                 ></ins>
+                <script>
+                  (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
               </div>
             </div>
           </div>
@@ -95,15 +105,20 @@ export default function RootLayout({ children, params: { lang } }: Props) {
             <div className="bg-gray-100 h-full flex items-center justify-center">
               <script
                 async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
+                crossOrigin="anonymous"
               ></script>
               <ins
                 className="adsbygoogle"
                 style={{ display: "block" }}
                 data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
-                data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_BOTTOM}
-                data-ad-format="horizontal"
+                data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
+                data-ad-format="auto"
+                data-full-width-responsive="true"
               ></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
             </div>
           </div>
         </div>
