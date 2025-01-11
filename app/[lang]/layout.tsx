@@ -37,6 +37,11 @@ export default function RootLayout({ children, params: { lang } }: Props) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#ffffff" />
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body className={inter.className}>
         <div className="min-h-screen flex flex-col">
@@ -47,17 +52,11 @@ export default function RootLayout({ children, params: { lang } }: Props) {
               <LanguageSwitcher />
             </div>
           </header>
-
           {/* Main Content with Ads */}
           <div className="flex-1 flex">
             {/* Left Ad */}
             <div className="hidden lg:block w-64 p-4">
               <div className="bg-gray-100 h-full flex items-center justify-center">
-                <script
-                  async
-                  src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
-                  crossOrigin="anonymous"
-                ></script>
                 <ins
                   className="adsbygoogle"
                   style={{ display: "block" }}
@@ -66,9 +65,6 @@ export default function RootLayout({ children, params: { lang } }: Props) {
                   data-ad-format="auto"
                   data-full-width-responsive="true"
                 ></ins>
-                <script>
-                  (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
               </div>
             </div>
 
@@ -80,11 +76,6 @@ export default function RootLayout({ children, params: { lang } }: Props) {
             {/* Right Ad */}
             <div className="hidden lg:block w-64 p-4">
               <div className="bg-gray-100 h-full flex items-center justify-center">
-                <script
-                  async
-                  src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
-                  crossOrigin="anonymous"
-                ></script>
                 <ins
                   className="adsbygoogle"
                   style={{ display: "block" }}
@@ -93,9 +84,6 @@ export default function RootLayout({ children, params: { lang } }: Props) {
                   data-ad-format="auto"
                   data-full-width-responsive="true"
                 ></ins>
-                <script>
-                  (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
               </div>
             </div>
           </div>
@@ -103,11 +91,6 @@ export default function RootLayout({ children, params: { lang } }: Props) {
           {/* Bottom Ad */}
           <div className="h-24 p-4">
             <div className="bg-gray-100 h-full flex items-center justify-center">
-              <script
-                async
-                src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
-                crossOrigin="anonymous"
-              ></script>
               <ins
                 className="adsbygoogle"
                 style={{ display: "block" }}
@@ -116,12 +99,10 @@ export default function RootLayout({ children, params: { lang } }: Props) {
                 data-ad-format="auto"
                 data-full-width-responsive="true"
               ></ins>
-              <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-              </script>
             </div>
           </div>
         </div>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </body>
     </html>
   );
