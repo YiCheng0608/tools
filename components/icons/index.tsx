@@ -90,4 +90,25 @@ export function QRCodeIcon({ className = "w-6 h-6" }: IconProps) {
   );
 }
 
+export function RulerIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      <path d="M2 12h20" />
+      <path d="M6 8v8" />
+      <path d="M10 8v8" />
+      <path d="M14 8v8" />
+      <path d="M18 8v8" />
+      <path d="M8 10v4" />
+      <path d="M12 10v4" />
+      <path d="M16 10v4" />
+    </svg>
+  );
+}
+
 // ... 其他圖標

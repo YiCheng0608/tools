@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Free Online Tools",
-    "description": "Free online tools including calculator, color converter, and QR code generator. Simple and easy to use.",
-    "keywords": "online tools, calculator, color converter, qr code generator, free tools"
+    "description": "Free online tools including calculator, color converter, QR code generator, and unit converter. Simple and easy to use.",
+    "keywords": "online tools, calculator, color converter, qr code generator, unit converter, free tools"
   },
   "tools": {
     "categories": {
@@ -25,6 +25,68 @@
         "label": "QR Code Generator",
         "description": "Generate QR code from URL or text",
         "icon": "qrcode"
+      },
+      "unitConverter": {
+        "label": "Unit Converter",
+        "description": "Convert between different units of measurement",
+        "icon": "ruler",
+        "units": {
+          "length": "Length",
+          "area": "Area",
+          "volume": "Volume",
+          "weight": "Weight",
+          "temperature": "Temperature",
+          "speed": "Speed",
+          "time": "Time",
+          "digital": "Digital Storage",
+          "from": "From",
+          "to": "To",
+          "value": "Value",
+          "result": "Result",
+          "labels": {
+            "mm": "Millimeter",
+            "cm": "Centimeter",
+            "m": "Meter",
+            "km": "Kilometer",
+            "in": "Inch",
+            "ft": "Foot",
+            "yd": "Yard",
+            "mi": "Mile",
+            "mm2": "Square Millimeter",
+            "cm2": "Square Centimeter",
+            "m2": "Square Meter",
+            "km2": "Square Kilometer",
+            "ha": "Hectare",
+            "acre": "Acre",
+            "ml": "Milliliter",
+            "l": "Liter",
+            "m3": "Cubic Meter",
+            "gal": "Gallon (US)",
+            "mg": "Milligram",
+            "g": "Gram",
+            "kg": "Kilogram",
+            "t": "Metric Ton",
+            "lb": "Pound",
+            "oz": "Ounce",
+            "c": "Celsius",
+            "f": "Fahrenheit",
+            "k": "Kelvin",
+            "mps": "Meters per Second",
+            "kph": "Kilometers per Hour",
+            "mph": "Miles per Hour",
+            "knot": "Knot",
+            "ms": "Millisecond",
+            "s": "Second",
+            "min": "Minute",
+            "h": "Hour",
+            "d": "Day",
+            "b": "Byte",
+            "kb": "Kilobyte",
+            "mb": "Megabyte",
+            "gb": "Gigabyte",
+            "tb": "Terabyte"
+          }
+        }
       }
     }
   }
