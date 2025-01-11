@@ -6,6 +6,7 @@ import AdsenseScript from "@/components/AdsenseScript";
 import messages from "@/app/i18n";
 import { generateMetadata as baseMetadata } from "@/app/metadata";
 import "../globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,6 +46,9 @@ export default function RootLayout({ children, params: { lang } }: Props) {
         ></script>
       </head>
       <body className={inter.className}>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
         <div className="min-h-screen flex flex-col">
           {/* Header */}
           <header className="bg-white shadow">

@@ -81,9 +81,6 @@ export default function ToolsMenu({ lang }: ToolsMenuProps) {
                     <span className="text-sm font-medium text-center">
                       {tool.label}
                     </span>
-                    <span className="text-xs text-gray-500 text-center mt-1">
-                      {tool.description}
-                    </span>
                   </Link>
                 );
               })}
