@@ -39,13 +39,74 @@ export default function RootLayout({ children, params: { lang } }: Props) {
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className={inter.className}>
-        <header className="bg-white shadow">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <Navigation lang={lang} />
-            <LanguageSwitcher />
+        <div className="min-h-screen flex flex-col">
+          {/* Header */}
+          <header className="bg-white shadow">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+              <Navigation lang={lang} />
+              <LanguageSwitcher />
+            </div>
+          </header>
+
+          {/* Main Content with Ads */}
+          <div className="flex-1 flex">
+            {/* Left Ad */}
+            <div className="hidden lg:block w-64 p-4">
+              <div className="bg-gray-100 h-full flex items-center justify-center">
+                <script
+                  async
+                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                ></script>
+                <ins
+                  className="adsbygoogle"
+                  style={{ display: "block" }}
+                  data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
+                  data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR}
+                  data-ad-format="vertical"
+                ></ins>
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <main className="flex-1">
+              <div className="max-w-4xl mx-auto p-4">{children}</div>
+            </main>
+
+            {/* Right Ad */}
+            <div className="hidden lg:block w-64 p-4">
+              <div className="bg-gray-100 h-full flex items-center justify-center">
+                <script
+                  async
+                  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+                ></script>
+                <ins
+                  className="adsbygoogle"
+                  style={{ display: "block" }}
+                  data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
+                  data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR}
+                  data-ad-format="vertical"
+                ></ins>
+              </div>
+            </div>
           </div>
-        </header>
-        {children}
+
+          {/* Bottom Ad */}
+          <div className="h-24 p-4">
+            <div className="bg-gray-100 h-full flex items-center justify-center">
+              <script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+              ></script>
+              <ins
+                className="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
+                data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_BOTTOM}
+                data-ad-format="horizontal"
+              ></ins>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
