@@ -70,4 +70,24 @@ export function ColorPaletteIcon({ className = "w-6 h-6" }: IconProps) {
   );
 }
 
+export function QRCodeIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      <rect x="4" y="4" width="7" height="7" rx="1" />
+      <rect x="13" y="4" width="7" height="7" rx="1" />
+      <rect x="4" y="13" width="7" height="7" rx="1" />
+      <path d="M13 13h7v2h-7z" />
+      <path d="M13 17h7v2h-7z" />
+      <path d="M14 13v7" />
+      <path d="M18 13v7" />
+    </svg>
+  );
+}
+
 // ... 其他圖標

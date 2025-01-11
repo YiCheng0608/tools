@@ -32,6 +32,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function AdUnit() {
+  return (
+    <ins
+      className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
+      data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    />
+  );
+}
+
 export default function RootLayout({ children, params: { lang } }: Props) {
   return (
     <html lang={lang}>
@@ -57,19 +70,12 @@ export default function RootLayout({ children, params: { lang } }: Props) {
               <LanguageSwitcher />
             </div>
           </header>
-          {/* Main Content with Ads */}
-          <div className="flex-1 flex">
-            {/* Left Ad */}
-            <div className="hidden lg:block w-64 p-4">
+
+          <div className="flex-1 flex flex-col md:flex-row">
+            {/* Left Ad - 僅在 md 以上顯示 */}
+            <div className="hidden md:block w-64 p-4">
               <div className="bg-gray-100 h-full flex items-center justify-center">
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: "block" }}
-                  data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
-                  data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"
-                ></ins>
+                <AdUnit />
               </div>
             </div>
 
@@ -78,32 +84,29 @@ export default function RootLayout({ children, params: { lang } }: Props) {
               <div className="max-w-4xl mx-auto p-4">{children}</div>
             </main>
 
-            {/* Right Ad */}
-            <div className="hidden lg:block w-64 p-4">
+            {/* Right Ad - 僅在 md 以上顯示 */}
+            <div className="hidden md:block w-64 p-4">
               <div className="bg-gray-100 h-full flex items-center justify-center">
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: "block" }}
-                  data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
-                  data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"
-                ></ins>
+                <AdUnit />
               </div>
             </div>
           </div>
 
-          {/* Bottom Ad */}
-          <div className="h-24 p-4">
-            <div className="bg-gray-100 h-full flex items-center justify-center">
-              <ins
-                className="adsbygoogle"
-                style={{ display: "block" }}
-                data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT}
-                data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              ></ins>
+          {/* 廣告區域 */}
+          <div className="p-4 space-y-4">
+            {/* 手機版顯示兩個額外的廣告（原本的左右側廣告） */}
+            <div className="md:hidden space-y-4">
+              <div className="h-24 bg-gray-100 flex items-center justify-center">
+                <AdUnit />
+              </div>
+              <div className="h-24 bg-gray-100 flex items-center justify-center">
+                <AdUnit />
+              </div>
+            </div>
+
+            {/* 所有尺寸都顯示的底部廣告 */}
+            <div className="h-24 bg-gray-100 flex items-center justify-center">
+              <AdUnit />
             </div>
           </div>
         </div>

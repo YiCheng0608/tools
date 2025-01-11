@@ -1,13 +1,14 @@
 {
   "meta": {
     "title": "Free Online Tools",
-    "description": "Free online tools including calculator and color converter. Simple and easy to use.",
-    "keywords": "online tools, calculator, color converter, free tools"
+    "description": "Free online tools including calculator, color converter, and QR code generator. Simple and easy to use.",
+    "keywords": "online tools, calculator, color converter, qr code generator, free tools"
   },
   "tools": {
     "categories": {
       "calculator": "Calculators",
-      "converter": "Converters"
+      "converter": "Converters",
+      "generator": "Generators"
     },
     "list": {
       "calculator": {
@@ -19,6 +20,11 @@
         "label": "Color Converter",
         "description": "Convert colors between HEX, RGB, and HSL",
         "icon": "colorPalette"
+      },
+      "qrGenerator": {
+        "label": "QR Code Generator",
+        "description": "Generate QR code from URL or text",
+        "icon": "qrcode"
       }
     }
   }

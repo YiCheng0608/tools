@@ -1,13 +1,14 @@
 {
   "meta": {
     "title": "免費在線工具",
-    "description": "提供計算器和顏色轉換器等免費在線工具，簡單易用。",
-    "keywords": "在線工具,計算器,顏色轉換器,免費工具"
+    "description": "提供計算器、顏色轉換器和二維碼生成器等免費在線工具，簡單易用。",
+    "keywords": "在線工具,計算器,顏色轉換器,二維碼生成器,免費工具"
   },
   "tools": {
     "categories": {
       "calculator": "計算工具",
-      "converter": "轉換工具"
+      "converter": "轉換工具",
+      "generator": "生成工具"
     },
     "list": {
       "calculator": {
@@ -19,6 +20,11 @@
         "label": "顏色轉換器",
         "description": "在 HEX、RGB 和 HSL 之間轉換顏色",
         "icon": "colorPalette"
+      },
+      "qrGenerator": {
+        "label": "二維碼生成器",
+        "description": "將網址或文字轉換成二維碼",
+        "icon": "qrcode"
       }
     }
   }

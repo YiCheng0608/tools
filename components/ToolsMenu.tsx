@@ -16,7 +16,7 @@ const IconComponents: {
 } = {
   calculator: Icons.CalculatorIcon,
   colorPalette: Icons.ColorPaletteIcon,
-  switch: Icons.ConvertIcon,
+  qrcode: Icons.QRCodeIcon,
 };
 
 export default function ToolsMenu({ lang }: ToolsMenuProps) {
