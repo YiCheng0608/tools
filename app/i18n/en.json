@@ -1,27 +1,25 @@
 {
   "meta": {
     "title": "Free Online Tools",
-    "description": "Free online tools including calculator, timer, and color picker. Simple and easy to use.",
-    "keywords": "online tools, calculator, timer, color picker, free tools"
+    "description": "Free online tools including calculator and color converter. Simple and easy to use.",
+    "keywords": "online tools, calculator, color converter, free tools"
   },
-  "nav": {
-    "home": "Home",
-    "calculator": "Calculator",
-    "timer": "Timer",
-    "colorPicker": "Color Picker"
-  },
-  "widgets": {
-    "calculator": {
-      "title": "Simple Calculator",
-      "description": "A free online calculator for basic arithmetic operations"
+  "tools": {
+    "categories": {
+      "calculator": "Calculators",
+      "converter": "Converters"
     },
-    "timer": {
-      "title": "Countdown Timer",
-      "description": "Simple countdown timer for your daily tasks"
-    },
-    "colorPicker": {
-      "title": "Color Picker",
-      "description": "Pick and convert colors between different formats"
+    "list": {
+      "calculator": {
+        "label": "Calculator",
+        "description": "Basic calculator for simple calculations",
+        "icon": "calculator"
+      },
+      "colorConverter": {
+        "label": "Color Converter",
+        "description": "Convert colors between HEX, RGB, and HSL",
+        "icon": "colorPalette"
+      }
     }
   }
 }

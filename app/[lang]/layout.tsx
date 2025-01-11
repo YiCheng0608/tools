@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Navigation from "@/components/Navigation";
+import AdsenseScript from "@/components/AdsenseScript";
 import messages from "@/app/i18n";
 import { generateMetadata as baseMetadata } from "@/app/metadata";
 import "../globals.css";
@@ -102,7 +103,7 @@ export default function RootLayout({ children, params: { lang } }: Props) {
             </div>
           </div>
         </div>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <AdsenseScript />
       </body>
     </html>
   );
