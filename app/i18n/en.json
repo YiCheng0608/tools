@@ -18,8 +18,12 @@
       },
       "colorConverter": {
         "label": "Color Converter",
-        "description": "Convert colors between HEX, RGB, and HSL",
-        "icon": "colorPalette"
+        "description": "Convert colors between HEX and RGB",
+        "icon": "colorPalette",
+        "formats": {
+          "hex": "HEX",
+          "rgb": "RGB"
+        }
       },
       "qrGenerator": {
         "label": "QR Code Generator",
@@ -85,6 +89,32 @@
             "mb": "Megabyte",
             "gb": "Gigabyte",
             "tb": "Terabyte"
+          }
+        }
+      },
+      "imageConverter": {
+        "label": "Image Converter",
+        "description": "Convert images between different formats",
+        "icon": "image",
+        "formats": {
+          "input": "Input Format",
+          "output": "Output Format",
+          "selectFile": "Select Image",
+          "convert": "Convert",
+          "download": "Download",
+          "maxSize": "Maximum file size: 10MB",
+          "dropzone": "Drag and drop image here, or click to select",
+          "processing": "Processing...",
+          "error": {
+            "unsupported": "Unsupported image format",
+            "convert": "Failed to convert image",
+            "tooLarge": "Image file is too large"
+          },
+          "types": {
+            "jpg": "JPEG Image",
+            "png": "PNG Image",
+            "webp": "WebP Image",
+            "svg": "SVG Vector Image"
           }
         }
       }

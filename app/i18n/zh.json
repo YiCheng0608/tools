@@ -18,8 +18,12 @@
       },
       "colorConverter": {
         "label": "顏色轉換器",
-        "description": "在 HEX、RGB 和 HSL 之間轉換顏色",
-        "icon": "colorPalette"
+        "description": "在 HEX 和 RGB 之間轉換顏色",
+        "icon": "colorPalette",
+        "formats": {
+          "hex": "HEX 色碼",
+          "rgb": "RGB 色碼"
+        }
       },
       "qrGenerator": {
         "label": "二維碼生成器",
@@ -85,6 +89,32 @@
             "mb": "百萬位元組",
             "gb": "十億位元組",
             "tb": "兆位元組"
+          }
+        }
+      },
+      "imageConverter": {
+        "label": "圖片轉換器",
+        "description": "在不同格式之間轉換圖片",
+        "icon": "image",
+        "formats": {
+          "input": "輸入格式",
+          "output": "輸出格式",
+          "selectFile": "選擇圖片",
+          "convert": "轉換",
+          "download": "下載",
+          "maxSize": "檔案大小上限：10MB",
+          "dropzone": "拖放圖片到此處，或點擊選擇",
+          "processing": "處理中...",
+          "error": {
+            "unsupported": "不支援的圖片格式",
+            "convert": "圖片轉換失敗",
+            "tooLarge": "圖片檔案太大"
+          },
+          "types": {
+            "jpg": "JPEG 圖片",
+            "png": "PNG 圖片",
+            "webp": "WebP 圖片",
+            "svg": "SVG 向量圖"
           }
         }
       }

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import messages from "@/app/i18n";
-import ColorConverter from "@/components/widgets/ColorConverter";
+import ImageConverter from "@/components/widgets/ImageConverter";
 
 interface Props {
   params: {
@@ -13,28 +13,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = messages[lang as keyof typeof messages];
 
   return {
-    title: t.tools.list.colorConverter.label,
-    description: t.tools.list.colorConverter.description,
+    title: t.tools.list.imageConverter.label,
+    description: t.tools.list.imageConverter.description,
     alternates: {
       languages: {
-        "en-US": `/en/colorConverter`,
-        "zh-TW": `/zh/colorConverter`,
+        "en-US": `/en/imageConverter`,
+        "zh-TW": `/zh/imageConverter`,
       },
     },
   };
 }
 
-export default function ColorConverterPage({ params: { lang } }: Props) {
+export default function ImageConverterPage({ params: { lang } }: Props) {
   const t = messages[lang as keyof typeof messages];
 
   return (
     <div className="max-w-xl mx-auto">
       <h1 className="text-3xl font-bold mb-8 text-center">
-        {t.tools.list.colorConverter.label}
+        {t.tools.list.imageConverter.label}
       </h1>
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <ColorConverter formats={t.tools.list.colorConverter.formats} />
-      </div>
+      <ImageConverter formats={t.tools.list.imageConverter.formats} />
     </div>
   );
 }
