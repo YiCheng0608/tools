@@ -92,7 +92,7 @@ export default function RootLayout({ children, params: { lang } }: Props) {
             {/* Main Content */}
             <main className="flex-1 flex justify-center">
               <div className="max-w-7xl w-full p-4 h-[calc(100vh-4rem-6rem)]">
-                <div className="bg-blue-50 rounded-lg shadow-lg p-6 h-full backdrop-blur-md">
+                <div className="bg-yellow-50 rounded-lg shadow-lg p-6 h-full backdrop-blur-md">
                   {children}
                 </div>
               </div>

@@ -62,7 +62,7 @@ export default function ToolsMenu({ lang }: ToolsMenuProps) {
       <div className="absolute left-0 w-full h-2 -bottom-2" />
 
       {isOpen && (
-        <div className="absolute top-[calc(100%+8px)] left-0 w-96 bg-white rounded-lg shadow-xl border border-gray-200">
+        <div className="absolute top-[calc(100%+8px)] left-0 w-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50">
           <div className="max-h-[32rem] overflow-y-auto">
             <div className="grid grid-cols-3 gap-2 p-4">
               {tools.map((tool) => {
