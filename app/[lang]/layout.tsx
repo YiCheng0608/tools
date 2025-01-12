@@ -92,7 +92,7 @@ export default function RootLayout({ children, params: { lang } }: Props) {
             {/* Main Content */}
             <main className="flex-1 flex justify-center">
               <div className="max-w-7xl w-full p-4 h-[calc(100vh-4rem-6rem)]">
-                <div className="bg-white rounded-lg shadow-lg p-6 h-full">
+                <div className="bg-blue-50 rounded-lg shadow-lg p-6 h-full backdrop-blur-md">
                   {children}
                 </div>
               </div>
@@ -123,6 +123,13 @@ export default function RootLayout({ children, params: { lang } }: Props) {
               <AdUnit />
             </div>
           </div>
+
+          {/* Footer */}
+          <footer className="bg-gray-100 text-center py-4">
+            <p className="text-sm text-gray-600">
+              © {new Date().getFullYear()} Cheng Tools. All rights reserved.
+            </p>
+          </footer>
         </div>
         <AdsenseScript />
       </body>

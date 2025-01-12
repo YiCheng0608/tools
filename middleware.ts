@@ -21,7 +21,6 @@ export function middleware(request: NextRequest) {
 
   // 處理根路徑 "/"
   if (pathname === "/") {
-    // 從 cookie 或 accept-language 獲取偏好語言
     const browserLocale = request.headers
       .get("accept-language")
       ?.split(",")[0]
@@ -33,16 +32,12 @@ export function middleware(request: NextRequest) {
         ? browserLocale
         : DEFAULT_LOCALE);
 
-    return NextResponse.redirect(
-      new URL(`/${preferredLocale}/${DEFAULT_TOOL}`, request.url)
-    );
+    return NextResponse.redirect(new URL(`/${preferredLocale}`, request.url));
   }
 
   // 處理語系根目錄 "/en" 或 "/zh"
   if (SUPPORTED_LOCALES.includes(pathname.slice(1))) {
-    return NextResponse.redirect(
-      new URL(`${pathname}/${DEFAULT_TOOL}`, request.url)
-    );
+    return;
   }
 
   // 獲取當前請求的語言
