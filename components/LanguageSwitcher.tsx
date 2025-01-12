@@ -1,31 +1,64 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { useState, useRef } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import * as Icons from "@/components/icons";
+
+interface Language {
+  code: string;
+  label: string;
+}
+
+const languages: Language[] = [
+  { code: "en", label: "English" },
+  { code: "zh", label: "中文" },
+];
 
 export default function LanguageSwitcher() {
+  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
   const pathname = usePathname();
   const currentLang = pathname.split("/")[1];
-  const currentTool = pathname.split("/")[2] || "calculator"; // 預設工具
+
+  const handleLanguageChange = (langCode: string) => {
+    const newPath = pathname.replace(/^\/[^/]+/, `/${langCode}`);
+    router.push(newPath);
+    setIsOpen(false);
+  };
+
+  const currentLanguage = languages.find((lang) => lang.code === currentLang);
 
   return (
-    <div className="flex gap-2">
-      <Link
-        href={`/en/${currentTool}`}
-        className={`px-2 py-1 rounded ${
-          currentLang === "en" ? "bg-blue-500 text-white" : "bg-gray-200"
-        }`}
+    <div className="relative" onMouseLeave={() => setIsOpen(false)}>
+      <button
+        className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-gray-100"
+        onMouseEnter={() => setIsOpen(true)}
       >
-        English
-      </Link>
-      <Link
-        href={`/zh/${currentTool}`}
-        className={`px-2 py-1 rounded ${
-          currentLang === "zh" ? "bg-blue-500 text-white" : "bg-gray-200"
-        }`}
-      >
-        中文
-      </Link>
+        <Icons.LanguageIcon className="w-5 h-5" />
+        <span className="text-sm">{currentLanguage?.label}</span>
+      </button>
+
+      <div className="absolute left-0 w-full h-2 -bottom-2" />
+
+      {isOpen && (
+        <div className="absolute top-[calc(100%+8px)] right-0 w-32 bg-white rounded-lg shadow-xl border border-gray-200">
+          <div className="py-1">
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 ${
+                  language.code === currentLang
+                    ? "text-blue-600 font-medium"
+                    : "text-gray-700"
+                }`}
+                onClick={() => handleLanguageChange(language.code)}
+              >
+                {language.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

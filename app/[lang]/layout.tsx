@@ -49,9 +49,13 @@ export default function RootLayout({ children, params: { lang } }: Props) {
   return (
     <html lang={lang}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#ffffff" />
+        <link rel="icon" href="/images/favicon-32x32.ico" sizes="32x32" />
+        <link rel="icon" href="/images/favicon-16x16.ico" sizes="16x16" />
+        <link
+          rel="apple-touch-icon"
+          href="/images/apple-touch-icon.ico"
+          sizes="180x180"
+        />
         <script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
