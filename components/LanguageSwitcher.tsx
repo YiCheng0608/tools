@@ -31,7 +31,7 @@ export default function LanguageSwitcher() {
   return (
     <div className="relative" onMouseLeave={() => setIsOpen(false)}>
       <button
-        className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-gray-100"
+        className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-yellow-50 text-gray-800"
         onMouseEnter={() => setIsOpen(true)}
       >
         <Icons.LanguageIcon className="w-5 h-5" />
@@ -46,9 +46,9 @@ export default function LanguageSwitcher() {
             {languages.map((language) => (
               <button
                 key={language.code}
-                className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-50 ${
+                className={`w-full px-4 py-2 text-left text-sm hover:bg-yellow-50 ${
                   language.code === currentLang
-                    ? "text-blue-600 font-medium"
+                    ? "text-yellow-600 font-medium"
                     : "text-gray-700"
                 }`}
                 onClick={() => handleLanguageChange(language.code)}

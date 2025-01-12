@@ -7,6 +7,7 @@ import messages from "@/app/i18n";
 import { generateMetadata as baseMetadata } from "@/app/metadata";
 import "../globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import Logo from "@/components/Logo";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -62,35 +63,44 @@ export default function RootLayout({ children, params: { lang } }: Props) {
           crossOrigin="anonymous"
         ></script>
       </head>
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} bg-gradient-to-br from-gray-50 to-gray-100`}
+      >
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
         <div className="min-h-screen flex flex-col">
           {/* Header */}
-          <header className="bg-white shadow">
+          <header className="bg-yellow-100 shadow-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-              <Navigation lang={lang} />
-              <LanguageSwitcher />
+              <Logo />
+              <div className="flex items-center space-x-4 text-gray-800">
+                <Navigation lang={lang} />
+                <LanguageSwitcher />
+              </div>
             </div>
           </header>
 
           <div className="flex-1 flex flex-col md:flex-row">
-            {/* Left Ad - 僅在 md 以上顯示 */}
+            {/* Left Ad */}
             <div className="hidden md:block w-64 p-4">
-              <div className="bg-gray-100 h-full flex items-center justify-center">
+              <div className="bg-white rounded-lg shadow-lg h-full flex items-center justify-center">
                 <AdUnit />
               </div>
             </div>
 
             {/* Main Content */}
-            <main className="flex-1">
-              <div className="max-w-4xl mx-auto p-4">{children}</div>
+            <main className="flex-1 flex justify-center">
+              <div className="max-w-7xl w-full p-4 h-[calc(100vh-4rem-6rem)]">
+                <div className="bg-white rounded-lg shadow-lg p-6 h-full">
+                  {children}
+                </div>
+              </div>
             </main>
 
-            {/* Right Ad - 僅在 md 以上顯示 */}
+            {/* Right Ad */}
             <div className="hidden md:block w-64 p-4">
-              <div className="bg-gray-100 h-full flex items-center justify-center">
+              <div className="bg-white rounded-lg shadow-lg h-full flex items-center justify-center">
                 <AdUnit />
               </div>
             </div>
@@ -98,18 +108,18 @@ export default function RootLayout({ children, params: { lang } }: Props) {
 
           {/* 廣告區域 */}
           <div className="p-4 space-y-4">
-            {/* 手機版顯示兩個額外的廣告（原本的左右側廣告） */}
+            {/* 手機版廣告 */}
             <div className="md:hidden space-y-4">
-              <div className="h-24 bg-gray-100 flex items-center justify-center">
+              <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
                 <AdUnit />
               </div>
-              <div className="h-24 bg-gray-100 flex items-center justify-center">
+              <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
                 <AdUnit />
               </div>
             </div>
 
-            {/* 所有尺寸都顯示的底部廣告 */}
-            <div className="h-24 bg-gray-100 flex items-center justify-center">
+            {/* 底部廣告 */}
+            <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
               <AdUnit />
             </div>
           </div>

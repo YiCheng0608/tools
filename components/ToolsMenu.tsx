@@ -53,7 +53,7 @@ export default function ToolsMenu({ lang }: ToolsMenuProps) {
       onMouseLeave={() => setIsOpen(false)}
     >
       <button
-        className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-gray-100"
+        className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-yellow-50"
         onClick={() => setIsOpen(!isOpen)}
       >
         <Icons.ConvertIcon className="w-5 h-5" />
