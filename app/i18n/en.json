@@ -119,5 +119,38 @@
         }
       }
     }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "sections": {
+      "collect": {
+        "title": "1. No Data Collection",
+        "description": "We do not collect or store any personal information. All tools on this website operate entirely in your browser:",
+        "items": [
+          "All file processing is done locally in your browser",
+          "No files are uploaded to any servers",
+          "No user data is tracked or stored",
+          "No personal information is required to use our tools"
+        ]
+      },
+      "usage": {
+        "title": "2. Browser Storage",
+        "description": "Our website only uses essential browser storage to:",
+        "items": [
+          "Remember your language preference",
+          "Maintain basic website functionality",
+          "Ensure proper tool operation"
+        ]
+      },
+      "security": {
+        "title": "3. Data Security",
+        "description": "We prioritize your privacy and security. All operations are performed locally in your browser, and no data is transmitted to or stored on our servers. This ensures that your files and information remain completely private and under your control."
+      },
+      "cookies": {
+        "title": "4. Cookies",
+        "description": "We use only essential cookies that are necessary for the website to function properly. These cookies are used solely for remembering your language preference and do not track any personal information."
+      }
+    }
   }
 }

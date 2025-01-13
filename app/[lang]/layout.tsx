@@ -8,6 +8,7 @@ import { generateMetadata as baseMetadata } from "@/app/metadata";
 import "../globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Logo from "@/components/Logo";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,6 +48,7 @@ function AdUnit() {
 }
 
 export default function RootLayout({ children, params: { lang } }: Props) {
+  const t = messages[lang as keyof typeof messages];
   return (
     <html lang={lang}>
       <head>
@@ -57,6 +59,7 @@ export default function RootLayout({ children, params: { lang } }: Props) {
           href="/images/apple-touch-icon.ico"
           sizes="180x180"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
@@ -83,11 +86,11 @@ export default function RootLayout({ children, params: { lang } }: Props) {
 
           <div className="flex-1 flex flex-col md:flex-row">
             {/* Left Ad */}
-            <div className="hidden md:block w-64 p-4">
+            {/* <div className="hidden md:block w-64 p-4">
               <div className="bg-white rounded-lg shadow-lg h-full flex items-center justify-center">
                 <AdUnit />
               </div>
-            </div>
+            </div> */}
 
             {/* Main Content */}
             <main className="flex-1 flex justify-center">
@@ -99,35 +102,42 @@ export default function RootLayout({ children, params: { lang } }: Props) {
             </main>
 
             {/* Right Ad */}
-            <div className="hidden md:block w-64 p-4">
+            {/* <div className="hidden md:block w-64 p-4">
               <div className="bg-white rounded-lg shadow-lg h-full flex items-center justify-center">
                 <AdUnit />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* 廣告區域 */}
-          <div className="p-4 space-y-4">
-            {/* 手機版廣告 */}
-            <div className="md:hidden space-y-4">
+          {/* <div className="p-4 space-y-4"> */}
+          {/* 手機版廣告 */}
+          {/* <div className="md:hidden space-y-4">
               <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
                 <AdUnit />
               </div>
               <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
                 <AdUnit />
               </div>
-            </div>
+            </div> */}
 
-            {/* 底部廣告 */}
-            <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
+          {/* 底部廣告 */}
+          {/* <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
               <AdUnit />
             </div>
-          </div>
+          </div> */}
 
           {/* Footer */}
           <footer className="bg-gray-100 text-center py-4">
             <p className="text-sm text-gray-600">
-              © {new Date().getFullYear()} Cheng Tools. All rights reserved.
+              © {new Date().getFullYear()} Cheng Tools. All rights reserved.{" "}
+              <span className="mx-2">|</span>
+              <Link
+                href={`/${lang}/privacy`}
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                {t.privacy.title}
+              </Link>
             </p>
           </footer>
         </div>

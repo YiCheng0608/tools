@@ -23,8 +23,6 @@ export function generateMetadata(
     generator: "Next.js",
     keywords: translations.meta.keywords,
     referrer: "origin-when-cross-origin",
-    themeColor: "#2563eb",
-    viewport: "width=device-width, initial-scale=1",
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: "/",
