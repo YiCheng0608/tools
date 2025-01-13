@@ -152,5 +152,17 @@
         "description": "We use only essential cookies that are necessary for the website to function properly. These cookies are used solely for remembering your language preference and do not track any personal information."
       }
     }
+  },
+  "cookieConsent": {
+    "title": "Cookie Preferences",
+    "message": "We use cookies to enhance your browsing experience. Some cookies are essential for the website to function properly.",
+    "preferences": "Cookie Preferences",
+    "essential": "Accept Essential Only",
+    "acceptAll": "Accept All",
+    "back": "Back",
+    "essentialTitle": "Essential Cookies",
+    "essentialDesc": "Required for the website to function properly and remember your language preference.",
+    "analyticsTitle": "Analytics Cookies",
+    "analyticsDesc": "Help us understand how visitors interact with our website to improve our services."
   }
 }

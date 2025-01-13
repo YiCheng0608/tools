@@ -1,55 +1,35 @@
 "use client";
 
 import Script from "next/script";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-declare global {
-  interface Window {
-    gtag: (
-      option: string,
-      gaId: string,
-      options: Record<string, unknown>
-    ) => void;
-  }
-}
-
-interface GoogleAnalyticsProps {
-  gaId: string;
-}
-
-export default function GoogleAnalytics({ gaId }: GoogleAnalyticsProps) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+export default function GoogleAnalytics({ gaId }: { gaId: string }) {
+  const [isConsented, setIsConsented] = useState(false);
 
   useEffect(() => {
-    if (pathname && window.gtag) {
-      window.gtag("config", gaId, {
-        page_path: pathname + searchParams.toString(),
-      });
+    const consent = localStorage.getItem("cookie-consent");
+    if (consent) {
+      const { analytics } = JSON.parse(consent);
+      setIsConsented(analytics);
     }
-  }, [pathname, searchParams, gaId]);
+  }, []);
+
+  if (!isConsented) return null;
 
   return (
     <>
       <Script
-        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-      />
-      <Script
-        id="google-analytics"
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${gaId}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
       />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${gaId}');
+        `}
+      </Script>
     </>
   );
 }

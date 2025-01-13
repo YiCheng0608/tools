@@ -148,5 +148,17 @@
         "description": "我們只使用網站正常運作所必需的基本 cookie。這些 cookie 僅用於記住您的語言偏好，不會追蹤任何個人資訊。"
       }
     }
+  },
+  "cookieConsent": {
+    "title": "Cookie 設定",
+    "message": "我們使用 cookie 來改善您的瀏覽體驗。某些 cookie 對於網站的正常運作是必要的。",
+    "preferences": "Cookie 偏好設定",
+    "essential": "僅接受必要項目",
+    "acceptAll": "接受全部",
+    "back": "返回",
+    "essentialTitle": "必要的 Cookie",
+    "essentialDesc": "網站正常運作和記住語言偏好所需的必要項目。",
+    "analyticsTitle": "分析用 Cookie",
+    "analyticsDesc": "幫助我們了解訪客如何使用網站，以改進我們的服務。"
   }
 }

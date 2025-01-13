@@ -9,6 +9,7 @@ import "../globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Logo from "@/components/Logo";
 import Link from "next/link";
+import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -142,6 +143,7 @@ export default function RootLayout({ children, params: { lang } }: Props) {
           </footer>
         </div>
         <AdsenseScript />
+        <CookieConsent />
       </body>
     </html>
   );
