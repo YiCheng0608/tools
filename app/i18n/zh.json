@@ -12,9 +12,33 @@
     },
     "list": {
       "calculator": {
-        "label": "計算器",
-        "description": "基礎的計算功能",
-        "icon": "calculator"
+        "label": "工程計算機",
+        "description": "具有工程功能的科學計算機",
+        "buttons": {
+          "clear": "清除",
+          "clearAll": "全部清除",
+          "backspace": "⌫",
+          "square": "x²",
+          "cube": "x³",
+          "power": "xʸ",
+          "sqrt": "√",
+          "log": "log",
+          "ln": "ln",
+          "sin": "sin",
+          "cos": "cos",
+          "tan": "tan",
+          "pi": "π",
+          "e": "e",
+          "factorial": "n!",
+          "inverse": "1/x",
+          "memory": {
+            "save": "MS",
+            "recall": "MR",
+            "clear": "MC",
+            "add": "M+",
+            "subtract": "M-"
+          }
+        }
       },
       "colorConverter": {
         "label": "顏色轉換器",

@@ -12,9 +12,33 @@
     },
     "list": {
       "calculator": {
-        "label": "Calculator",
-        "description": "Basic calculator for simple calculations",
-        "icon": "calculator"
+        "label": "Engineering Calculator",
+        "description": "Scientific calculator with engineering functions",
+        "buttons": {
+          "clear": "Clear",
+          "clearAll": "Clear All",
+          "backspace": "⌫",
+          "square": "x²",
+          "cube": "x³",
+          "power": "xʸ",
+          "sqrt": "√",
+          "log": "log",
+          "ln": "ln",
+          "sin": "sin",
+          "cos": "cos",
+          "tan": "tan",
+          "pi": "π",
+          "e": "e",
+          "factorial": "n!",
+          "inverse": "1/x",
+          "memory": {
+            "save": "MS",
+            "recall": "MR",
+            "clear": "MC",
+            "add": "M+",
+            "subtract": "M-"
+          }
+        }
       },
       "colorConverter": {
         "label": "Color Converter",

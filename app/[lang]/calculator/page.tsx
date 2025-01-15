@@ -34,7 +34,7 @@ export default function CalculatorPage({ params: { lang } }: Props) {
         <h1 className="text-3xl font-bold mb-8 text-center">
           {t.tools.list.calculator.label}
         </h1>
-        <Calculator />
+        <Calculator buttons={t.tools.list.calculator.buttons} />
       </div>
     </>
   );
