@@ -87,7 +87,9 @@ export default function RootLayout({ children, params: { lang } }: Props) {
             </div>
           </header>
 
-          <main className="flex-1 flex flex-col">{children}</main>
+          <main className="flex-1 flex flex-col justify-center py-4">
+            {children}
+          </main>
 
           {/* Footer */}
           <footer className="bg-gray-100 text-center py-4">

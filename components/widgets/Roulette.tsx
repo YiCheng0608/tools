@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { createPortal } from "react-dom";
 
 interface RouletteItem {
   name: string;
@@ -32,6 +33,45 @@ interface RouletteProps {
       probabilityRequired: string;
     };
   };
+}
+
+interface ResultPopupProps {
+  winner: string;
+  onClose: () => void;
+  texts: {
+    messages: {
+      winner: string;
+    };
+  };
+}
+
+function ResultPopup({ winner, onClose, texts }: ResultPopupProps) {
+  const handleClose = () => {
+    onClose();
+  };
+
+  return createPortal(
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.9 }}
+        className="bg-white rounded-lg shadow-xl p-6 m-4 max-w-sm w-full"
+      >
+        <p className="text-lg font-medium text-gray-900 mb-2">
+          {texts.messages.winner}
+        </p>
+        <p className="text-2xl font-bold text-blue-600 mb-6">{winner}</p>
+        <button
+          onClick={handleClose}
+          className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          OK
+        </button>
+      </motion.div>
+    </div>,
+    document.body
+  );
 }
 
 const COLORS = [
@@ -137,6 +177,10 @@ export default function Roulette({ texts }: RouletteProps) {
     }
 
     return items[items.length - 1];
+  };
+
+  const resetWheel = () => {
+    setRotation(0);
   };
 
   const handleSpin = () => {
@@ -258,15 +302,14 @@ export default function Roulette({ texts }: RouletteProps) {
 
           <AnimatePresence>
             {winner && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className="mt-4 p-4 bg-green-100 text-green-700 rounded-lg w-[300px]"
-              >
-                <p className="font-medium">{texts.messages.winner}</p>
-                <p className="text-xl font-bold mt-1">{winner}</p>
-              </motion.div>
+              <ResultPopup
+                winner={winner}
+                onClose={() => {
+                  setWinner(null);
+                  resetWheel();
+                }}
+                texts={texts}
+              />
             )}
           </AnimatePresence>
         </div>
