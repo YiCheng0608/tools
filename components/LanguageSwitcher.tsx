@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import * as Icons from "@/components/icons";
+import Link from "next/link";
 
 interface Language {
   code: string;
@@ -28,14 +29,17 @@ export default function LanguageSwitcher() {
 
   const currentLanguage = languages.find((lang) => lang.code === currentLang);
 
+  const menuRef = useRef(null);
   return (
     <div className="relative" onMouseLeave={() => setIsOpen(false)}>
       <button
-        className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-yellow-50 text-gray-800"
+        className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 rounded-lg hover:bg-yellow-50 text-gray-800"
         onMouseEnter={() => setIsOpen(true)}
       >
         <Icons.LanguageIcon className="w-5 h-5" />
-        <span className="text-sm">{currentLanguage?.label}</span>
+        <span className="hidden sm:inline text-sm">
+          {currentLanguage?.label}
+        </span>
       </button>
 
       <div className="absolute left-0 w-full h-2 -bottom-2" />

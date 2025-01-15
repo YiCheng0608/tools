@@ -66,14 +66,16 @@ export default function RootLayout({ children, params: { lang } }: Props) {
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
           crossOrigin="anonymous"
         ></script>
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
       </head>
-      <body
-        className={`${inter.className} bg-gradient-to-br from-gray-50 to-gray-100`}
-      >
+      <body className={`${inter.className} bg-yellow-50`}>
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
-        <div className="min-h-screen flex flex-col">
+        <div className="flex flex-col min-h-screen">
           {/* Header */}
           <header className="bg-yellow-100 shadow-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -85,48 +87,7 @@ export default function RootLayout({ children, params: { lang } }: Props) {
             </div>
           </header>
 
-          <div className="flex-1 flex flex-col md:flex-row">
-            {/* Left Ad */}
-            {/* <div className="hidden md:block w-64 p-4">
-              <div className="bg-white rounded-lg shadow-lg h-full flex items-center justify-center">
-                <AdUnit />
-              </div>
-            </div> */}
-
-            {/* Main Content */}
-            <main className="flex-1 flex justify-center">
-              <div className="max-w-7xl w-full p-4 h-[calc(100vh-4rem-6rem)]">
-                <div className="bg-yellow-50 rounded-lg shadow-lg p-6 h-full backdrop-blur-md">
-                  {children}
-                </div>
-              </div>
-            </main>
-
-            {/* Right Ad */}
-            {/* <div className="hidden md:block w-64 p-4">
-              <div className="bg-white rounded-lg shadow-lg h-full flex items-center justify-center">
-                <AdUnit />
-              </div>
-            </div> */}
-          </div>
-
-          {/* 廣告區域 */}
-          {/* <div className="p-4 space-y-4"> */}
-          {/* 手機版廣告 */}
-          {/* <div className="md:hidden space-y-4">
-              <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
-                <AdUnit />
-              </div>
-              <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
-                <AdUnit />
-              </div>
-            </div> */}
-
-          {/* 底部廣告 */}
-          {/* <div className="bg-white rounded-lg shadow-lg h-24 flex items-center justify-center">
-              <AdUnit />
-            </div>
-          </div> */}
+          <main className="flex-1 flex flex-col">{children}</main>
 
           {/* Footer */}
           <footer className="bg-gray-100 text-center py-4">

@@ -14,7 +14,7 @@
       "roulette": {
         "label": "幸運轉盤",
         "description": "創建並轉動自訂獎品轉盤",
-        "icon": "wheel",
+        "icon": "casino",
         "buttons": {
           "spin": "轉動",
           "reset": "重置",
@@ -39,6 +39,7 @@
       "calculator": {
         "label": "工程計算機",
         "description": "具有工程功能的科學計算機",
+        "icon": "functions",
         "buttons": {
           "clear": "清除",
           "clearAll": "全部清除",
@@ -68,7 +69,7 @@
       "colorConverter": {
         "label": "顏色轉換器",
         "description": "在 HEX 和 RGB 之間轉換顏色",
-        "icon": "colorPalette",
+        "icon": "palette",
         "formats": {
           "hex": "HEX 色碼",
           "rgb": "RGB 色碼"
@@ -77,12 +78,12 @@
       "qrGenerator": {
         "label": "二維碼生成器",
         "description": "將網址或文字轉換成二維碼",
-        "icon": "qrcode"
+        "icon": "qr_code_2"
       },
       "unitConverter": {
         "label": "單位轉換器",
         "description": "在不同計量單位之間轉換",
-        "icon": "ruler",
+        "icon": "straighten",
         "units": {
           "length": "長度",
           "area": "面積",

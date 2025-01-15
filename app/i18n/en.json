@@ -14,7 +14,7 @@
       "roulette": {
         "label": "Lucky Wheel",
         "description": "Create and spin a custom prize wheel",
-        "icon": "wheel",
+        "icon": "casino",
         "buttons": {
           "spin": "SPIN",
           "reset": "Reset",
@@ -39,6 +39,7 @@
       "calculator": {
         "label": "Engineering Calculator",
         "description": "Scientific calculator with engineering functions",
+        "icon": "functions",
         "buttons": {
           "clear": "Clear",
           "clearAll": "Clear All",
@@ -68,7 +69,7 @@
       "colorConverter": {
         "label": "Color Converter",
         "description": "Convert colors between HEX and RGB",
-        "icon": "colorPalette",
+        "icon": "palette",
         "formats": {
           "hex": "HEX",
           "rgb": "RGB"
@@ -77,12 +78,12 @@
       "qrGenerator": {
         "label": "QR Code Generator",
         "description": "Generate QR code from URL or text",
-        "icon": "qrcode"
+        "icon": "qr_code_2"
       },
       "unitConverter": {
         "label": "Unit Converter",
         "description": "Convert between different units of measurement",
-        "icon": "ruler",
+        "icon": "straighten",
         "units": {
           "length": "Length",
           "area": "Area",

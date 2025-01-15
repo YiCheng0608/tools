@@ -14,10 +14,11 @@ interface ToolsMenuProps {
 const IconComponents: {
   [key: string]: React.ComponentType<{ className?: string }>;
 } = {
-  calculator: Icons.CalculatorIcon,
-  colorPalette: Icons.ColorConverterIcon,
-  qrcode: Icons.QRCodeIcon,
-  ruler: Icons.UnitConverterIcon,
+  casino: Icons.RouletteIcon,
+  functions: Icons.CalculatorIcon,
+  palette: Icons.ColorConverterIcon,
+  qr_code_2: Icons.QRGeneratorIcon,
+  straighten: Icons.UnitConverterIcon,
   image: Icons.ImageConverterIcon,
 };
 
@@ -53,7 +54,7 @@ export default function ToolsMenu({ lang }: ToolsMenuProps) {
       onMouseLeave={() => setIsOpen(false)}
     >
       <button
-        className="flex items-center space-x-2 px-4 py-2 rounded-lg hover:bg-yellow-50"
+        className="flex items-center space-x-2 p-2 sm:px-4 sm:py-2 rounded-lg hover:bg-yellow-50"
         onClick={() => setIsOpen(!isOpen)}
       >
         <Icons.ConvertIcon className="w-5 h-5" />
@@ -62,9 +63,9 @@ export default function ToolsMenu({ lang }: ToolsMenuProps) {
       <div className="absolute left-0 w-full h-2 -bottom-2" />
 
       {isOpen && (
-        <div className="absolute top-[calc(100%+8px)] left-0 w-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50">
-          <div className="max-h-[32rem] overflow-y-auto">
-            <div className="grid grid-cols-3 gap-2 p-4">
+        <div className="absolute top-[calc(100%+8px)] right-0 w-screen sm:w-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50">
+          <div className="max-h-[80vh] overflow-y-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 p-3 sm:p-4">
               {tools.map((tool) => {
                 const IconComponent =
                   IconComponents[tool.icon] || Icons.ConvertIcon;
@@ -72,15 +73,15 @@ export default function ToolsMenu({ lang }: ToolsMenuProps) {
                   <Link
                     key={tool.id}
                     href={`/${lang}/${tool.id}`}
-                    className={`flex flex-col items-center p-4 rounded-lg transition-colors ${
+                    className={`flex flex-col items-center p-2 sm:p-4 rounded-lg transition-colors ${
                       pathname.includes(tool.id)
                         ? "bg-blue-50 text-blue-600"
                         : "hover:bg-gray-50"
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    <IconComponent className="w-8 h-8 mb-2" />
-                    <span className="text-sm font-medium text-center">
+                    <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 mb-1 sm:mb-2 text-blue-500" />
+                    <span className="text-xs sm:text-sm font-medium text-center line-clamp-2">
                       {tool.label}
                     </span>
                   </Link>
