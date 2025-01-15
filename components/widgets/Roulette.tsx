@@ -29,6 +29,7 @@ interface RouletteProps {
       maximum: string;
       invalidProbability: string;
       totalProbability: string;
+      probabilityRequired: string;
     };
   };
 }
@@ -141,6 +142,17 @@ export default function Roulette({ texts }: RouletteProps) {
   const handleSpin = () => {
     if (items.length < 2) {
       setError(texts.messages.minimum);
+      return;
+    }
+
+    const totalProb = calculateTotalProbability();
+    if (totalProb !== 100) {
+      setError(
+        texts.messages.probabilityRequired.replace(
+          "{total}",
+          totalProb.toString()
+        )
+      );
       return;
     }
 

@@ -32,7 +32,8 @@
           "minimum": "請至少新增 2 個項目",
           "maximum": "最多只能新增 12 個項目",
           "invalidProbability": "請輸入 0 到 100 之間的有效機率值",
-          "totalProbability": "總機率不能超過 100%"
+          "totalProbability": "總機率不能超過 100%",
+          "probabilityRequired": "總機率必須為 100%，目前為 {total}%"
         }
       },
       "calculator": {

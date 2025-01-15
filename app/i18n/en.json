@@ -32,7 +32,8 @@
           "minimum": "Please add at least 2 items",
           "maximum": "Maximum 12 items allowed",
           "invalidProbability": "Please enter a valid probability between 0 and 100",
-          "totalProbability": "Total probability cannot exceed 100%"
+          "totalProbability": "Total probability cannot exceed 100%",
+          "probabilityRequired": "Total probability must be 100%, current: {total}%"
         }
       },
       "calculator": {
