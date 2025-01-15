@@ -11,6 +11,30 @@
       "generator": "Generators"
     },
     "list": {
+      "roulette": {
+        "label": "Lucky Wheel",
+        "description": "Create and spin a custom prize wheel",
+        "icon": "wheel",
+        "buttons": {
+          "spin": "SPIN",
+          "reset": "Reset",
+          "add": "Add Item",
+          "remove": "Remove",
+          "clear": "Clear All"
+        },
+        "placeholders": {
+          "item": "Enter prize name",
+          "probability": "Enter probability (0-100)",
+          "empty": "Add items to start spinning"
+        },
+        "messages": {
+          "winner": "Congratulations! You won:",
+          "minimum": "Please add at least 2 items",
+          "maximum": "Maximum 12 items allowed",
+          "invalidProbability": "Please enter a valid probability between 0 and 100",
+          "totalProbability": "Total probability cannot exceed 100%"
+        }
+      },
       "calculator": {
         "label": "Engineering Calculator",
         "description": "Scientific calculator with engineering functions",

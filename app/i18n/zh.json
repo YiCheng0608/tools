@@ -11,6 +11,30 @@
       "generator": "生成工具"
     },
     "list": {
+      "roulette": {
+        "label": "幸運轉盤",
+        "description": "創建並轉動自訂獎品轉盤",
+        "icon": "wheel",
+        "buttons": {
+          "spin": "轉動",
+          "reset": "重置",
+          "add": "新增項目",
+          "remove": "移除",
+          "clear": "清空"
+        },
+        "placeholders": {
+          "item": "輸入獎品名稱",
+          "probability": "輸入機率值 (0-100)",
+          "empty": "新增項目開始轉動"
+        },
+        "messages": {
+          "winner": "恭喜！您抽中了：",
+          "minimum": "請至少新增 2 個項目",
+          "maximum": "最多只能新增 12 個項目",
+          "invalidProbability": "請輸入 0 到 100 之間的有效機率值",
+          "totalProbability": "總機率不能超過 100%"
+        }
+      },
       "calculator": {
         "label": "工程計算機",
         "description": "具有工程功能的科學計算機",
