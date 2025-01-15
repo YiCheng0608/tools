@@ -63,9 +63,18 @@ export default function ToolsMenu({ lang }: ToolsMenuProps) {
       <div className="absolute left-0 w-full h-2 -bottom-2" />
 
       {isOpen && (
-        <div className="absolute top-[calc(100%+8px)] right-0 w-screen sm:w-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50">
-          <div className="max-h-[80vh] overflow-y-auto">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 p-3 sm:p-4">
+        <div className="fixed sm:absolute inset-0 sm:inset-auto sm:top-[calc(100%+8px)] sm:right-0 sm:w-96 bg-white sm:rounded-lg shadow-xl sm:border border-gray-200 z-50">
+          <div className="h-full sm:max-h-[80vh] overflow-y-auto">
+            <div className="flex sm:hidden items-center justify-between p-4 border-b">
+              <h2 className="text-lg font-medium">工具選單</h2>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 hover:bg-gray-100 rounded-lg"
+              >
+                <Icons.CloseIcon className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="flex sm:grid flex-col sm:grid-cols-3 divide-y sm:divide-y-0 sm:gap-2 sm:p-4">
               {tools.map((tool) => {
                 const IconComponent =
                   IconComponents[tool.icon] || Icons.ConvertIcon;
@@ -73,15 +82,15 @@ export default function ToolsMenu({ lang }: ToolsMenuProps) {
                   <Link
                     key={tool.id}
                     href={`/${lang}/${tool.id}`}
-                    className={`flex flex-col items-center p-2 sm:p-4 rounded-lg transition-colors ${
+                    className={`flex sm:flex-col items-center p-4 sm:p-4 transition-colors ${
                       pathname.includes(tool.id)
                         ? "bg-blue-50 text-blue-600"
                         : "hover:bg-gray-50"
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 mb-1 sm:mb-2 text-blue-500" />
-                    <span className="text-xs sm:text-sm font-medium text-center line-clamp-2">
+                    <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 sm:mb-2 text-blue-500" />
+                    <span className="ml-3 sm:ml-0 text-sm font-medium sm:text-center line-clamp-2">
                       {tool.label}
                     </span>
                   </Link>
