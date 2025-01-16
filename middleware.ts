@@ -2,9 +2,8 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
-const SUPPORTED_LOCALES = ["en", "zh"];
+const SUPPORTED_LOCALES = ["en", "zh", "ja", "ko"];
 const DEFAULT_LOCALE = "en";
-const DEFAULT_TOOL = "imageConverter";
 
 export function middleware(request: NextRequest) {
   // 檢查是否為靜態文件

@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "title": "無料オンラインツール",
+    "description": "計算機、カラーコンバーター、QRコード生成器、単位変換器などの無料オンラインツールを提供します。シンプルで使いやすい。",
+    "keywords": "オンラインツール,計算機,カラーコンバーター,QRコード生成器,単位変換器,無料ツール"
+  },
+  "tools": {
+    "categories": {
+      "calculator": "計算ツール",
+      "converter": "ウィジェット",
+      "generator": "生成ツール"
+    },
+    "list": {
+      "roulette": {
+        "label": "ルーレット",
+        "description": "カスタム賞品ルーレットを作成して回す",
+        "icon": "casino",
+        "buttons": {
+          "spin": "回す",
+          "reset": "リセット",
+          "add": "項目追加",
+          "remove": "削除",
+          "clear": "全て削除"
+        },
+        "placeholders": {
+          "item": "賞品名を入力",
+          "probability": "確率を入力 (0-100)",
+          "empty": "項目を追加して開始"
+        },
+        "messages": {
+          "winner": "おめでとう！当選したのは：",
+          "minimum": "最低2項目を追加してください",
+          "maximum": "最大12項目まで追加できます",
+          "invalidProbability": "0から100の間の有効な確率を入力してください",
+          "totalProbability": "合計確率が100%を超えることはできません",
+          "probabilityRequired": "合計確率は100%である必要があります。現在：{total}%"
+        }
+      },
+      "calculator": {
+        "label": "工学電卓",
+        "description": "工学機能付き関数電卓",
+        "icon": "functions",
+        "buttons": {
+          "clear": "クリア",
+          "clearAll": "全クリア",
+          "backspace": "⌫",
+          "square": "x²",
+          "cube": "x³",
+          "power": "xʸ",
+          "sqrt": "√",
+          "log": "log",
+          "ln": "ln",
+          "sin": "sin",
+          "cos": "cos",
+          "tan": "tan",
+          "pi": "π",
+          "e": "e",
+          "factorial": "n!",
+          "inverse": "1/x",
+          "memory": {
+            "save": "MS",
+            "recall": "MR",
+            "clear": "MC",
+            "add": "M+",
+            "subtract": "M-"
+          }
+        }
+      },
+      "colorConverter": {
+        "label": "カラーコンバーター",
+        "description": "HEXとRGBの間で色を変換",
+        "icon": "palette",
+        "formats": {
+          "hex": "HEXカラー",
+          "rgb": "RGBカラー"
+        }
+      },
+      "qrGenerator": {
+        "label": "QRコード生成",
+        "description": "URLやテキストからQRコードを生成",
+        "icon": "qr_code_2"
+      },
+      "unitConverter": {
+        "label": "単位変換",
+        "description": "さまざまな単位間の変換",
+        "icon": "straighten",
+        "units": {
+          "length": "長さ",
+          "area": "面積",
+          "volume": "体積",
+          "weight": "重量",
+          "temperature": "温度",
+          "speed": "速度",
+          "time": "時間",
+          "digital": "データ容量",
+          "from": "変換元",
+          "to": "変換先",
+          "value": "数値",
+          "result": "結果",
+          "labels": {
+            "mm": "ミリメートル",
+            "cm": "センチメートル",
+            "m": "メートル",
+            "km": "キロメートル",
+            "in": "インチ",
+            "ft": "フィート",
+            "yd": "ヤード",
+            "mi": "マイル",
+            "mm2": "平方ミリメートル",
+            "cm2": "平方センチメートル",
+            "m2": "平方メートル",
+            "km2": "平方キロメートル",
+            "ha": "ヘクタール",
+            "acre": "エーカー",
+            "ml": "ミリリットル",
+            "l": "リットル",
+            "m3": "立方メートル",
+            "gal": "ガロン(米)",
+            "mg": "ミリグラム",
+            "g": "グラム",
+            "kg": "キログラム",
+            "t": "トン",
+            "lb": "ポンド",
+            "oz": "オンス",
+            "c": "摂氏",
+            "f": "華氏",
+            "k": "ケルビン",
+            "mps": "メートル/秒",
+            "kph": "キロメートル/時",
+            "mph": "マイル/時",
+            "knot": "ノット",
+            "ms": "ミリ秒",
+            "s": "秒",
+            "min": "分",
+            "h": "時間",
+            "d": "日",
+            "b": "バイト",
+            "kb": "キロバイト",
+            "mb": "メガバイト",
+            "gb": "ギガバイト",
+            "tb": "テラバイト"
+          }
+        }
+      },
+      "imageConverter": {
+        "label": "画像変換",
+        "description": "異なる形式間で画像を変換",
+        "icon": "image",
+        "formats": {
+          "input": "入力形式",
+          "output": "出力形式",
+          "selectFile": "画像を選択",
+          "convert": "変換",
+          "download": "ダウンロード",
+          "maxSize": "最大ファイルサイズ：10MB",
+          "dropzone": "ここに画像をドロップ、またはクリックして選択",
+          "processing": "処理中...",
+          "error": {
+            "unsupported": "未対応の画像形式です",
+            "convert": "画像の変換に失敗しました",
+            "tooLarge": "ファイルサイズが大きすぎます"
+          },
+          "types": {
+            "jpg": "JPEG画像",
+            "png": "PNG画像",
+            "webp": "WebP画像",
+            "svg": "SVGベクター画像"
+          }
+        }
+      }
+    }
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "lastUpdated": "最終更新日",
+    "sections": {
+      "collect": {
+        "title": "1. データ収集なし",
+        "description": "個人情報は収集・保存しません。すべてのツールはブラウザ上で動作します：",
+        "items": [
+          "すべてのファイル処理はブラウザ内で行われます",
+          "サーバーへのファイルアップロードはありません",
+          "ユーザーデータの追跡や保存は行いません",
+          "ツールの使用に個人情報は不要です"
+        ]
+      },
+      "usage": {
+        "title": "2. ブラウザストレージ",
+        "description": "必要最小限のブラウザストレージのみを使用：",
+        "items": [
+          "言語設定の記憶",
+          "基本的なウェブサイト機能の維持",
+          "ツールの正常動作の確保"
+        ]
+      },
+      "security": {
+        "title": "3. データセキュリティ",
+        "description": "プライバシーとセキュリティを重視しています。すべての操作はブラウザ内で実行され、データはサーバーに送信・保存されません。これにより、ファイルや情報は完全にプライベートで、ユーザーの管理下に保たれます。"
+      },
+      "cookies": {
+        "title": "4. Cookie方針",
+        "description": "ウェブサイトの基本機能に必要な必須Cookieのみを使用します。これらのCookieは言語設定の記憶のみに使用され、個人情報は追跡しません。"
+      }
+    }
+  },
+  "cookieConsent": {
+    "title": "Cookie設定",
+    "message": "より良いブラウジング体験のためにCookieを使用しています。一部のCookieはウェブサイトの基本機能に必要です。",
+    "preferences": "Cookie設定",
+    "essential": "必須のみ受け入れ",
+    "acceptAll": "すべて受け入れ",
+    "back": "戻る",
+    "essentialTitle": "必須Cookie",
+    "essentialDesc": "ウェブサイトの基本機能と言語設定の記憶に必要です。",
+    "analyticsTitle": "分析Cookie",
+    "analyticsDesc": "サービス改善のため、ウェブサイトの利用状況を理解するのに役立ちます。"
+  }
+}

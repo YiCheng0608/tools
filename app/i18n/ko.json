@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "title": "무료 온라인 도구",
+    "description": "계산기, 색상 변환기, QR 코드 생성기, 단위 변환기 등의 무료 온라인 도구를 제공합니다. 간단하고 사용하기 쉽습니다.",
+    "keywords": "온라인 도구,계산기,색상 변환기,QR 코드 생성기,단위 변환기,무료 도구"
+  },
+  "tools": {
+    "categories": {
+      "calculator": "계산 도구",
+      "converter": "위젯",
+      "generator": "생성 도구"
+    },
+    "list": {
+      "roulette": {
+        "label": "룰렛",
+        "description": "커스텀 상품 룰렛 생성 및 회전",
+        "icon": "casino",
+        "buttons": {
+          "spin": "회전",
+          "reset": "초기화",
+          "add": "항목 추가",
+          "remove": "삭제",
+          "clear": "전체 삭제"
+        },
+        "placeholders": {
+          "item": "상품명 입력",
+          "probability": "확률 입력 (0-100)",
+          "empty": "항목을 추가하여 시작"
+        },
+        "messages": {
+          "winner": "축하합니다! 당첨된 상품:",
+          "minimum": "최소 2개의 항목을 추가해주세요",
+          "maximum": "최대 12개의 항목만 추가할 수 있습니다",
+          "invalidProbability": "0에서 100 사이의 유효한 확률을 입력해주세요",
+          "totalProbability": "총 확률이 100%를 초과할 수 없습니다",
+          "probabilityRequired": "총 확률은 100%여야 합니다. 현재: {total}%"
+        }
+      },
+      "calculator": {
+        "label": "공학용 계산기",
+        "description": "공학 기능이 포함된 공학용 계산기",
+        "icon": "functions",
+        "buttons": {
+          "clear": "지우기",
+          "clearAll": "전체 지우기",
+          "backspace": "⌫",
+          "square": "x²",
+          "cube": "x³",
+          "power": "xʸ",
+          "sqrt": "√",
+          "log": "log",
+          "ln": "ln",
+          "sin": "sin",
+          "cos": "cos",
+          "tan": "tan",
+          "pi": "π",
+          "e": "e",
+          "factorial": "n!",
+          "inverse": "1/x",
+          "memory": {
+            "save": "MS",
+            "recall": "MR",
+            "clear": "MC",
+            "add": "M+",
+            "subtract": "M-"
+          }
+        }
+      },
+      "colorConverter": {
+        "label": "색상 변환기",
+        "description": "HEX와 RGB 간의 색상 변환",
+        "icon": "palette",
+        "formats": {
+          "hex": "HEX 색상",
+          "rgb": "RGB 색상"
+        }
+      },
+      "qrGenerator": {
+        "label": "QR 코드 생성기",
+        "description": "URL이나 텍스트를 QR 코드로 변환",
+        "icon": "qr_code_2"
+      },
+      "unitConverter": {
+        "label": "단위 변환기",
+        "description": "다양한 단위 간의 변환",
+        "icon": "straighten",
+        "units": {
+          "length": "길이",
+          "area": "면적",
+          "volume": "부피",
+          "weight": "무게",
+          "temperature": "온도",
+          "speed": "속도",
+          "time": "시간",
+          "digital": "디지털 용량",
+          "from": "변환 전",
+          "to": "변환 후",
+          "value": "값",
+          "result": "결과",
+          "labels": {
+            "mm": "밀리미터",
+            "cm": "센티미터",
+            "m": "미터",
+            "km": "킬로미터",
+            "in": "인치",
+            "ft": "피트",
+            "yd": "야드",
+            "mi": "마일",
+            "mm2": "제곱밀리미터",
+            "cm2": "제곱센티미터",
+            "m2": "제곱미터",
+            "km2": "제곱킬로미터",
+            "ha": "헥타르",
+            "acre": "에이커",
+            "ml": "밀리리터",
+            "l": "리터",
+            "m3": "세제곱미터",
+            "gal": "갤런(미국)",
+            "mg": "밀리그램",
+            "g": "그램",
+            "kg": "킬로그램",
+            "t": "톤",
+            "lb": "파운드",
+            "oz": "온스",
+            "c": "섭씨",
+            "f": "화씨",
+            "k": "켈빈",
+            "mps": "미터/초",
+            "kph": "킬로미터/시",
+            "mph": "마일/시",
+            "knot": "노트",
+            "ms": "밀리초",
+            "s": "초",
+            "min": "분",
+            "h": "시간",
+            "d": "일",
+            "b": "바이트",
+            "kb": "킬로바이트",
+            "mb": "메가바이트",
+            "gb": "기가바이트",
+            "tb": "테라바이트"
+          }
+        }
+      },
+      "imageConverter": {
+        "label": "이미지 변환기",
+        "description": "다양한 형식 간의 이미지 변환",
+        "icon": "image",
+        "formats": {
+          "input": "입력 형식",
+          "output": "출력 형식",
+          "selectFile": "이미지 선택",
+          "convert": "변환",
+          "download": "다운로드",
+          "maxSize": "최대 파일 크기: 10MB",
+          "dropzone": "이미지를 여기에 드래그하거나 클릭하여 선택",
+          "processing": "처리 중...",
+          "error": {
+            "unsupported": "지원하지 않는 이미지 형식입니다",
+            "convert": "이미지 변환에 실패했습니다",
+            "tooLarge": "파일 크기가 너무 큽니다"
+          },
+          "types": {
+            "jpg": "JPEG 이미지",
+            "png": "PNG 이미지",
+            "webp": "WebP 이미지",
+            "svg": "SVG 벡터 이미지"
+          }
+        }
+      }
+    }
+  },
+  "privacy": {
+    "title": "개인정보 처리방침",
+    "lastUpdated": "최종 업데이트",
+    "sections": {
+      "collect": {
+        "title": "1. 데이터 수집 없음",
+        "description": "개인정보를 수집하거나 저장하지 않습니다. 모든 도구는 브라우저에서 실행됩니다:",
+        "items": [
+          "모든 파일 처리는 브라우저 내에서 이루어집니다",
+          "서버로 파일을 업로드하지 않습니다",
+          "사용자 데이터를 추적하거나 저장하지 않습니다",
+          "도구 사용에 개인정보가 필요하지 않습니다"
+        ]
+      },
+      "usage": {
+        "title": "2. 브라우저 저장소",
+        "description": "필수적인 브라우저 저장소만 사용합니다:",
+        "items": [
+          "언어 설정 기억",
+          "기본적인 웹사이트 기능 유지",
+          "도구의 정상 작동 보장"
+        ]
+      },
+      "security": {
+        "title": "3. 데이터 보안",
+        "description": "개인정보 보호와 보안을 중요시합니다. 모든 작업은 브라우저 내에서 실행되며, 데이터는 서버로 전송되거나 저장되지 않습니다. 이를 통해 파일과 정보는 완전히 비공개로 유지되며 사용자의 통제 하에 있습니다."
+      },
+      "cookies": {
+        "title": "4. 쿠키 정책",
+        "description": "웹사이트의 기본 기능에 필요한 필수 쿠키만 사용합니다. 이러한 쿠키는 언어 설정을 기억하는 데만 사용되며 개인정보를 추적하지 않습니다."
+      }
+    }
+  },
+  "cookieConsent": {
+    "title": "쿠키 설정",
+    "message": "더 나은 브라우징 경험을 위해 쿠키를 사용합니다. 일부 쿠키는 웹사이트의 기본 기능에 필요합니다.",
+    "preferences": "쿠키 설정",
+    "essential": "필수 쿠키만 허용",
+    "acceptAll": "모두 허용",
+    "back": "뒤로",
+    "essentialTitle": "필수 쿠키",
+    "essentialDesc": "웹사이트의 기본 기능과 언어 설정 기억에 필요합니다.",
+    "analyticsTitle": "분석 쿠키",
+    "analyticsDesc": "서비스 개선을 위해 웹사이트 사용 현황을 이해하는 데 도움이 됩니다."
+  }
+}

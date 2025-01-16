@@ -29,6 +29,8 @@ export function generateMetadata(
       languages: {
         "en-US": "/en",
         "zh-TW": "/zh",
+        "ja-JP": "/ja",
+        "ko-KR": "/ko",
       },
     },
     openGraph: {
@@ -36,7 +38,13 @@ export function generateMetadata(
       description: translations.meta.description,
       siteName: "Widget Tools",
       url: siteUrl,
-      locale: params.lang === "en" ? "en_US" : "zh_TW",
+      locale:
+        {
+          en: "en_US",
+          zh: "zh_TW",
+          ja: "ja_JP",
+          ko: "ko_KR",
+        }[params.lang] || "en_US",
       type: "website",
     },
     twitter: {

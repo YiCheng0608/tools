@@ -9,7 +9,7 @@ export default function Logo({ width = 150, height = 150 }) {
   const lang = pathname.split("/")[1];
 
   return (
-    <Link href="/">
+    <Link href={`/${lang}`}>
       <div className="flex items-center space-x-2">
         <Image
           src="/images/Logo.svg"
