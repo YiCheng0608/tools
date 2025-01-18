@@ -129,13 +129,16 @@ export default function ExchangeRate({
   const handleSwap = () => {
     if (!toCurrency) return;
 
+    handleFromBlur();
+    handleToBlur();
+
+    // 同時更新搜尋框的顯示值
+    setFromSearch(toSearch);
+    setToSearch(fromSearch);
+
     // 交換貨幣代碼
     setFromCurrency(toCurrency);
     setToCurrency(fromCurrency);
-
-    // 同時更新搜尋框的顯示值
-    setFromSearch(toCurrency);
-    setToSearch(fromCurrency);
 
     setResult(null);
   };
@@ -200,38 +203,34 @@ export default function ExchangeRate({
 
   // 處理來源貨幣的 blur
   const handleFromBlur = () => {
-    setTimeout(() => {
-      const matchedCurrency = filteredFromCurrencies.find(
-        (currency) => currency.code.toLowerCase() === fromSearch.toLowerCase()
-      );
+    const matchedCurrency = filteredFromCurrencies.find(
+      (currency) => currency.code.toLowerCase() === fromSearch.toLowerCase()
+    );
 
-      if (matchedCurrency) {
-        setFromCurrency(matchedCurrency.code);
-        setFromSearch(matchedCurrency.code); // 保持顯示選中的貨幣代碼
-      } else {
-        setFromSearch(fromCurrency); // 恢復顯示原本選中的貨幣代碼
-      }
-      setShowFromDropdown(false);
-      setResult(null);
-    }, 200);
+    if (matchedCurrency) {
+      setFromCurrency(matchedCurrency.code);
+      setFromSearch(matchedCurrency.code); // 保持顯示選中的貨幣代碼
+    } else {
+      setFromSearch(fromCurrency); // 恢復顯示原本選中的貨幣代碼
+    }
+    setShowFromDropdown(false);
+    setResult(null);
   };
 
   // 處理目標貨幣的 blur
   const handleToBlur = () => {
-    setTimeout(() => {
-      const matchedCurrency = filteredToCurrencies.find(
-        (currency) => currency.code.toLowerCase() === toSearch.toLowerCase()
-      );
+    const matchedCurrency = filteredToCurrencies.find(
+      (currency) => currency.code.toLowerCase() === toSearch.toLowerCase()
+    );
 
-      if (matchedCurrency) {
-        setToCurrency(matchedCurrency.code);
-        setToSearch(matchedCurrency.code); // 保持顯示選中的貨幣代碼
-      } else {
-        setToSearch(toCurrency); // 恢復顯示原本選中的貨幣代碼
-      }
-      setShowToDropdown(false);
-      setResult(null);
-    }, 200);
+    if (matchedCurrency) {
+      setToCurrency(matchedCurrency.code);
+      setToSearch(matchedCurrency.code); // 保持顯示選中的貨幣代碼
+    } else {
+      setToSearch(toCurrency); // 恢復顯示原本選中的貨幣代碼
+    }
+    setShowToDropdown(false);
+    setResult(null);
   };
 
   return (
@@ -249,8 +248,8 @@ export default function ExchangeRate({
                 fromCurrency ? "text-gray-900 font-medium" : "text-gray-500"
               }`}
               value={fromSearch}
-              onChange={(e) => {
-                setFromSearch(e.target.value);
+              onInput={(e) => {
+                setFromSearch(e.currentTarget.value);
                 setShowFromDropdown(true);
               }}
               onFocus={() => {
@@ -307,8 +306,8 @@ export default function ExchangeRate({
                 toCurrency ? "text-gray-900 font-medium" : "text-gray-500"
               }`}
               value={toSearch}
-              onChange={(e) => {
-                setToSearch(e.target.value);
+              onInput={(e) => {
+                setToSearch(e.currentTarget.value);
                 setShowToDropdown(true);
               }}
               onFocus={() => {
