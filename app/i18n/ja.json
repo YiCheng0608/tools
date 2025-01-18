@@ -167,6 +167,28 @@
             "svg": "SVGベクター画像"
           }
         }
+      },
+      "exchangeRate": {
+        "label": "為替レート換算",
+        "description": "シンプルで便利な通貨換算ツール",
+        "icon": "currency_exchange",
+        "formats": {
+          "from": "換算元通貨",
+          "to": "換算先通貨",
+          "amount": "金額",
+          "result": "結果",
+          "convert": "換算",
+          "loading": "レートを読み込み中...",
+          "error": "為替レートの取得に失敗しました",
+          "lastUpdate": "最終更新",
+          "swap": "通貨を交換",
+          "attribution": {
+            "text": "為替レートデータは",
+            "api": "RTer 為替レート API",
+            "license": "CC BY-SA 3.0 TW ライセンス",
+            "comply": "に従い"
+          }
+        }
       }
     }
   },

@@ -167,6 +167,28 @@
             "svg": "SVG 벡터 이미지"
           }
         }
+      },
+      "exchangeRate": {
+        "label": "환율 변환",
+        "description": "간단하고 편리한 통화 변환 도구",
+        "icon": "currency_exchange",
+        "formats": {
+          "from": "원본 통화",
+          "to": "대상 통화",
+          "amount": "금액",
+          "result": "결과",
+          "convert": "변환",
+          "loading": "환율을 불러오는 중...",
+          "error": "환율 정보를 가져오지 못했습니다",
+          "lastUpdate": "마지막 업데이트",
+          "swap": "통화 교환",
+          "attribution": {
+            "text": "환율 데이터 제공:",
+            "api": "RTer 환율 API",
+            "license": "CC BY-SA 3.0 TW 라이선스",
+            "comply": "를 준수하며"
+          }
+        }
       }
     }
   },

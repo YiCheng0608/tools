@@ -17,6 +17,7 @@ export default function Logo({ width = 150, height = 150 }) {
           width={width}
           height={height}
           className="text-blue-600"
+          priority
         />
       </div>
     </Link>

@@ -167,6 +167,27 @@
             "svg": "SVG Vector Image"
           }
         }
+      },
+      "exchangeRate": {
+        "label": "Exchange Rate",
+        "description": "Simple and quick currency conversion tool",
+        "icon": "currency_exchange",
+        "formats": {
+          "from": "Source Currency",
+          "to": "Target Currency",
+          "amount": "Amount",
+          "result": "Result",
+          "convert": "Convert",
+          "loading": "Loading rates...",
+          "error": "Failed to fetch exchange rates",
+          "lastUpdate": "Last updated",
+          "attribution": {
+            "text": "Exchange rate data provided by",
+            "api": "RTer Exchange Rate API",
+            "license": "CC BY-SA 3.0 TW License",
+            "comply": "and complies with"
+          }
+        }
       }
     }
   },

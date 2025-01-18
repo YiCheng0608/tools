@@ -167,6 +167,28 @@
             "svg": "SVG 向量圖"
           }
         }
+      },
+      "exchangeRate": {
+        "label": "匯率轉換",
+        "description": "簡單快速的貨幣轉換計算工具",
+        "icon": "currency_exchange",
+        "formats": {
+          "from": "來源貨幣",
+          "to": "目標貨幣",
+          "amount": "金額",
+          "result": "結果",
+          "convert": "轉換",
+          "loading": "載入匯率中...",
+          "error": "無法取得匯率資訊",
+          "lastUpdate": "最後更新",
+          "swap": "交換貨幣",
+          "attribution": {
+            "text": "本網頁使用的匯率數據來自",
+            "api": "RTer 匯率 API",
+            "license": "創用CC BY-SA 3.0 TW 授權條款",
+            "comply": "並遵循"
+          }
+        }
       }
     }
   },

@@ -47,3 +47,11 @@ export const LanguageIcon: FC<IconProps> = (props) => (
 export const ConvertIcon: FC<IconProps> = (props) => (
   <IconWrapper {...props} name="menu" />
 );
+
+export const CurrencyExchangeIcon: FC<IconProps> = (props) => (
+  <IconWrapper {...props} name="currency_exchange" />
+);
+
+export const SwapIcon: FC<IconProps> = (props) => (
+  <IconWrapper {...props} name="swap_horiz" />
+);

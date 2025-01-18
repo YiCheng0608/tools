@@ -20,6 +20,7 @@ const IconComponents: {
   qr_code_2: Icons.QRGeneratorIcon,
   straighten: Icons.UnitConverterIcon,
   image: Icons.ImageConverterIcon,
+  currency_exchange: Icons.CurrencyExchangeIcon,
 };
 
 export default function ToolsMenu({ lang }: ToolsMenuProps) {
