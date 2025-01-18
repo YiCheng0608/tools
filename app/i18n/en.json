@@ -180,6 +180,7 @@
           "convert": "Convert",
           "loading": "Loading rates...",
           "error": "Failed to fetch exchange rates",
+          "swap": "Swap Currencies",
           "lastUpdate": "Last updated",
           "attribution": {
             "text": "Exchange rate data provided by",
