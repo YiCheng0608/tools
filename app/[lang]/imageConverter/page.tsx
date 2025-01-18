@@ -19,6 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         "en-US": `/en/imageConverter`,
         "zh-TW": `/zh/imageConverter`,
+        "ja-JP": `/ja/imageConverter`,
+        "ko-KR": `/ko/imageConverter`,
       },
     },
   };

@@ -19,6 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         "en-US": `/en/roulette`,
         "zh-TW": `/zh/roulette`,
+        "ja-JP": `/ja/roulette`,
+        "ko-KR": `/ko/roulette`,
       },
     },
   };
