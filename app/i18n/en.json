@@ -236,5 +236,25 @@
     "essentialDesc": "Required for the website to function properly and remember your language preference.",
     "analyticsTitle": "Analytics Cookies",
     "analyticsDesc": "Help us understand how visitors interact with our website to improve our services."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "If you have any questions, suggestions, or feedback, please feel free to contact us. We value every user's opinion and will respond to your message as soon as possible.",
+    "methods": {
+      "title": "Contact Methods",
+      "email": "Email"
+    },
+    "response": {
+      "title": "Response Time",
+      "description": "We will process your message and respond as soon as possible. Thank you for your patience."
+    },
+    "note": {
+      "title": "Notes",
+      "items": [
+        "Please provide a clear description of your issue so we can better assist you.",
+        "For technical issues, please specify your browser version and operating system.",
+        "All personal information will be protected according to our Privacy Policy."
+      ]
+    }
   }
 }

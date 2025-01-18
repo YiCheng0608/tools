@@ -102,6 +102,10 @@ export default function RootLayout({ children, params: { lang } }: Props) {
               >
                 {t.privacy.title}
               </Link>
+              <span className="mx-2">|</span>
+              <Link href={`/${lang}/contact`} className="hover:text-gray-900">
+                {t.contact.title}
+              </Link>
             </p>
           </footer>
         </div>
