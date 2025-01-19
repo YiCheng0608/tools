@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import ArticleGenerator from "@/components/widgets/ArticleGenerator";
-import messages from "@/app/i18n";
+import messages, { languages } from "@/app/i18n";
 
 interface Props {
   params: {
@@ -35,7 +35,10 @@ export default function ArticleGeneratorPage({ params: { lang } }: Props) {
         {t.tools.list.articleGenerator.label}
       </h1>
       <div className="bg-white rounded-lg shadow-lg p-6">
-        <ArticleGenerator formats={t.tools.list.articleGenerator.formats} />
+        <ArticleGenerator
+          formats={t.tools.list.articleGenerator.formats}
+          lang={languages[lang as keyof typeof languages]}
+        />
       </div>
     </div>
   );

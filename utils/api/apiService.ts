@@ -1,13 +1,7 @@
 import { AxiosRequestConfig } from "axios";
 import apiClient from "./client";
 
-export interface ApiResponse<T> {
-  data: T;
-  message?: string;
-  status: number;
-}
-
-export class ApiService<T> {
+export class ApiService {
   private endpoint: string;
 
   constructor(endpoint: string) {
@@ -18,9 +12,9 @@ export class ApiService<T> {
   async get(
     params?: Record<string, any>,
     options?: AxiosRequestConfig
-  ): Promise<ApiResponse<T[]>> {
+  ): Promise<any[]> {
     try {
-      const response = await apiClient.get<ApiResponse<T[]>>(this.endpoint, {
+      const response = await apiClient.get<any[]>(this.endpoint, {
         params,
         ...options,
       });
@@ -32,11 +26,11 @@ export class ApiService<T> {
 
   // POST
   async post(
-    data: Partial<T>,
+    data: Record<string, any>,
     options?: AxiosRequestConfig
-  ): Promise<ApiResponse<T>> {
+  ): Promise<any[]> {
     try {
-      const response = await apiClient.post<ApiResponse<T>>(
+      const response = await apiClient.post<any[]>(
         this.endpoint,
         data,
         options
@@ -50,11 +44,11 @@ export class ApiService<T> {
   // PUT
   async put(
     id: string | number,
-    data: Partial<T>,
+    data: Record<string, any>,
     options?: AxiosRequestConfig
-  ): Promise<ApiResponse<T>> {
+  ): Promise<any[]> {
     try {
-      const response = await apiClient.put<ApiResponse<T>>(
+      const response = await apiClient.put<any[]>(
         `${this.endpoint}/${id}`,
         data,
         options
@@ -69,9 +63,9 @@ export class ApiService<T> {
   async delete(
     id: string | number,
     options?: AxiosRequestConfig
-  ): Promise<ApiResponse<void>> {
+  ): Promise<any[]> {
     try {
-      const response = await apiClient.delete<ApiResponse<void>>(
+      const response = await apiClient.delete<any[]>(
         `${this.endpoint}/${id}`,
         options
       );

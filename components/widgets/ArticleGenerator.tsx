@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { articleService } from "@/utils/api/services/articleService";
+import { ArticleService } from "@/utils/api/services/articleService";
 
 interface ArticleGeneratorProps {
   formats: {
@@ -13,21 +13,32 @@ interface ArticleGeneratorProps {
     copied: string;
     wordCount: string;
   };
+  lang: string;
 }
 
-export default function ArticleGenerator({ formats }: ArticleGeneratorProps) {
+export default function ArticleGenerator({
+  formats,
+  lang,
+}: ArticleGeneratorProps) {
   const [title, setTitle] = useState("");
   const [article, setArticle] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+
+  const articleService = new ArticleService();
 
   const handleGenerate = async () => {
     if (!title.trim()) return;
 
     setIsGenerating(true);
     try {
-      const generatedArticle = await articleService.generateArticle(title);
-      setArticle(generatedArticle);
+      const generatedArticle = await articleService.generateArticle(
+        title,
+        lang
+      );
+      setArticle(
+        articleService.removePrompt(generatedArticle[0].generated_text)
+      );
     } catch (error) {
       console.error("Failed to generate article:", error);
       // TODO: 處理錯誤

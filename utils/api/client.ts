@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  timeout: 30000,
+  timeout: 60000,
   headers: {
     "Content-Type": "application/json",
   },
@@ -19,7 +19,7 @@ apiClient.interceptors.request.use(
 
 // Response 攔截器
 apiClient.interceptors.response.use(
-  (response) => response.data,
+  (response) => response,
   (error) => {
     // 這裡可以統一處理錯誤
     if (error.response) {
