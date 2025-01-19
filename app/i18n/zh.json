@@ -6,15 +6,17 @@
   },
   "tools": {
     "categories": {
-      "calculator": "計算工具",
-      "converter": "小工具",
+      "ai": "AI 工具",
+      "widget": "小工具",
       "generator": "生成工具"
     },
     "list": {
       "roulette": {
+        "id": "roulette",
+        "icon": "casino",
         "label": "幸運轉盤",
         "description": "創建並轉動自訂獎品轉盤",
-        "icon": "casino",
+        "category": "widget",
         "buttons": {
           "spin": "轉動",
           "reset": "重置",
@@ -37,9 +39,11 @@
         }
       },
       "calculator": {
+        "id": "calculator",
+        "icon": "functions",
         "label": "工程計算機",
         "description": "具有工程功能的科學計算機",
-        "icon": "functions",
+        "category": "widget",
         "buttons": {
           "clear": "清除",
           "clearAll": "全部清除",
@@ -67,23 +71,48 @@
         }
       },
       "colorConverter": {
+        "id": "colorConverter",
+        "icon": "palette",
         "label": "顏色轉換器",
         "description": "在 HEX 和 RGB 之間轉換顏色",
-        "icon": "palette",
+        "category": "widget",
         "formats": {
           "hex": "HEX 色碼",
           "rgb": "RGB 色碼"
         }
       },
       "qrGenerator": {
+        "id": "qrGenerator",
+        "icon": "qr_code_2",
         "label": "二維碼生成器",
         "description": "將網址或文字轉換成二維碼",
-        "icon": "qr_code_2"
+        "category": "generator",
+        "buttons": {
+          "spin": "轉動",
+          "reset": "重置",
+          "add": "新增項目",
+          "remove": "移除",
+          "clear": "清空"
+        },
+        "placeholders": {
+          "item": "輸入網址或文字",
+          "empty": "新增項目開始轉動"
+        },
+        "messages": {
+          "winner": "恭喜！您生成了：",
+          "minimum": "請至少新增 1 個項目",
+          "maximum": "最多只能新增 12 個項目",
+          "invalidInput": "請輸入有效的網址或文字",
+          "totalProbability": "總機率不能超過 100%",
+          "probabilityRequired": "總機率必須為 100%，目前為 {total}%"
+        }
       },
       "unitConverter": {
+        "id": "unitConverter",
+        "icon": "straighten",
         "label": "單位轉換器",
         "description": "在不同計量單位之間轉換",
-        "icon": "straighten",
+        "category": "widget",
         "units": {
           "length": "長度",
           "area": "面積",
@@ -143,9 +172,11 @@
         }
       },
       "imageConverter": {
+        "id": "imageConverter",
+        "icon": "image",
         "label": "圖片轉換器",
         "description": "在不同格式之間轉換圖片",
-        "icon": "image",
+        "category": "widget",
         "formats": {
           "input": "輸入格式",
           "output": "輸出格式",
@@ -169,9 +200,11 @@
         }
       },
       "exchangeRate": {
+        "id": "exchangeRate",
         "label": "匯率轉換",
         "description": "簡單快速的貨幣轉換計算工具",
         "icon": "currency_exchange",
+        "category": "widget",
         "formats": {
           "from": "來源貨幣",
           "to": "目標貨幣",
@@ -188,6 +221,22 @@
             "license": "創用CC BY-SA 3.0 TW 授權條款",
             "comply": "並遵循"
           }
+        }
+      },
+      "articleGenerator": {
+        "id": "articleGenerator",
+        "icon": "article",
+        "label": "文章產生器",
+        "description": "輸入標題，快速產生 200 字的文章內容",
+        "category": "ai",
+        "formats": {
+          "title": "文章標題",
+          "placeholder": "請輸入文章標題",
+          "generate": "產生文章",
+          "generating": "產生中...",
+          "copy": "複製文章",
+          "copied": "已複製",
+          "wordCount": "將產生約 200 字的文章"
         }
       }
     }

@@ -55,3 +55,7 @@ export const CurrencyExchangeIcon: FC<IconProps> = (props) => (
 export const SwapIcon: FC<IconProps> = (props) => (
   <IconWrapper {...props} name="swap_horiz" />
 );
+
+export const ArticleGeneratorIcon: FC<IconProps> = (props) => (
+  <IconWrapper {...props} name="article" />
+);

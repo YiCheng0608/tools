@@ -6,15 +6,17 @@
   },
   "tools": {
     "categories": {
-      "calculator": "計算ツール",
-      "converter": "ウィジェット",
+      "ai": "AI ツール",
+      "widget": "ウィジェット",
       "generator": "生成ツール"
     },
     "list": {
       "roulette": {
+        "id": "roulette",
+        "icon": "casino",
         "label": "ルーレット",
         "description": "カスタム賞品ルーレットを作成して回す",
-        "icon": "casino",
+        "category": "widget",
         "buttons": {
           "spin": "回す",
           "reset": "リセット",
@@ -37,9 +39,11 @@
         }
       },
       "calculator": {
+        "id": "calculator",
+        "icon": "functions",
         "label": "工学電卓",
         "description": "工学機能付き関数電卓",
-        "icon": "functions",
+        "category": "widget",
         "buttons": {
           "clear": "クリア",
           "clearAll": "全クリア",
@@ -67,23 +71,46 @@
         }
       },
       "colorConverter": {
+        "id": "colorConverter",
+        "icon": "palette",
         "label": "カラーコンバーター",
         "description": "HEXとRGBの間で色を変換",
-        "icon": "palette",
+        "category": "widget",
         "formats": {
           "hex": "HEXカラー",
           "rgb": "RGBカラー"
         }
       },
       "qrGenerator": {
+        "id": "qrGenerator",
+        "icon": "qr_code_2",
         "label": "QRコード生成",
         "description": "URLやテキストからQRコードを生成",
-        "icon": "qr_code_2"
+        "category": "generator",
+        "formats": {
+          "from": "換算元通貨",
+          "to": "換算先通貨",
+          "amount": "金額",
+          "result": "結果",
+          "convert": "換算",
+          "loading": "レートを読み込み中...",
+          "error": "為替レートの取得に失敗しました",
+          "lastUpdate": "最終更新",
+          "swap": "通貨を交換",
+          "attribution": {
+            "text": "為替レートデータは",
+            "api": "RTer 為替レート API",
+            "license": "CC BY-SA 3.0 TW ライセンス",
+            "comply": "に従い"
+          }
+        }
       },
       "unitConverter": {
+        "id": "unitConverter",
+        "icon": "straighten",
         "label": "単位変換",
         "description": "さまざまな単位間の変換",
-        "icon": "straighten",
+        "category": "widget",
         "units": {
           "length": "長さ",
           "area": "面積",
@@ -143,9 +170,11 @@
         }
       },
       "imageConverter": {
+        "id": "imageConverter",
+        "icon": "image",
         "label": "画像変換",
         "description": "異なる形式間で画像を変換",
-        "icon": "image",
+        "category": "widget",
         "formats": {
           "input": "入力形式",
           "output": "出力形式",
@@ -169,9 +198,11 @@
         }
       },
       "exchangeRate": {
+        "id": "exchangeRate",
         "label": "為替レート換算",
         "description": "シンプルで便利な通貨換算ツール",
         "icon": "currency_exchange",
+        "category": "widget",
         "formats": {
           "from": "換算元通貨",
           "to": "換算先通貨",
@@ -188,6 +219,22 @@
             "license": "CC BY-SA 3.0 TW ライセンス",
             "comply": "に従い"
           }
+        }
+      },
+      "articleGenerator": {
+        "id": "articleGenerator",
+        "icon": "article",
+        "label": "記事ジェネレーター",
+        "description": "タイトルを入力して、200文字の記事を生成",
+        "category": "ai",
+        "formats": {
+          "title": "記事タイトル",
+          "placeholder": "記事のタイトルを入力してください",
+          "generate": "記事を生成",
+          "generating": "生成中...",
+          "copy": "記事をコピー",
+          "copied": "コピーしました",
+          "wordCount": "約200文字の記事を生成します"
         }
       }
     }

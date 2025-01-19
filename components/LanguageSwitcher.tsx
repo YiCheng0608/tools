@@ -30,8 +30,6 @@ export default function LanguageSwitcher() {
   };
 
   const currentLanguage = languages.find((lang) => lang.code === currentLang);
-
-  const menuRef = useRef(null);
   return (
     <div className="relative" onMouseLeave={() => setIsOpen(false)}>
       <button

@@ -6,15 +6,17 @@
   },
   "tools": {
     "categories": {
-      "calculator": "Calculators",
-      "converter": "Widgets",
+      "ai": "AI Tools",
+      "widget": "Widgets",
       "generator": "Generators"
     },
     "list": {
       "roulette": {
+        "id": "roulette",
+        "icon": "casino",
         "label": "Lucky Wheel",
         "description": "Create and spin a custom prize wheel",
-        "icon": "casino",
+        "category": "widget",
         "buttons": {
           "spin": "SPIN",
           "reset": "Reset",
@@ -37,9 +39,11 @@
         }
       },
       "calculator": {
+        "id": "calculator",
+        "icon": "functions",
         "label": "Engineering Calculator",
         "description": "Scientific calculator with engineering functions",
-        "icon": "functions",
+        "category": "widget",
         "buttons": {
           "clear": "Clear",
           "clearAll": "Clear All",
@@ -67,23 +71,46 @@
         }
       },
       "colorConverter": {
+        "id": "colorConverter",
+        "icon": "palette",
         "label": "Color Converter",
         "description": "Convert colors between HEX and RGB",
-        "icon": "palette",
+        "category": "widget",
         "formats": {
           "hex": "HEX",
           "rgb": "RGB"
         }
       },
       "qrGenerator": {
+        "id": "qrGenerator",
+        "icon": "qr_code_2",
         "label": "QR Code Generator",
         "description": "Generate QR code from URL or text",
-        "icon": "qr_code_2"
+        "category": "generator",
+        "formats": {
+          "from": "Source Currency",
+          "to": "Target Currency",
+          "amount": "Amount",
+          "result": "Result",
+          "convert": "Convert",
+          "loading": "Loading rates...",
+          "error": "Failed to fetch exchange rates",
+          "swap": "Swap Currencies",
+          "lastUpdate": "Last updated",
+          "attribution": {
+            "text": "Exchange rate data provided by",
+            "api": "RTer Exchange Rate API",
+            "license": "CC BY-SA 3.0 TW License",
+            "comply": "and complies with"
+          }
+        }
       },
       "unitConverter": {
+        "id": "unitConverter",
+        "icon": "straighten",
         "label": "Unit Converter",
         "description": "Convert between different units of measurement",
-        "icon": "straighten",
+        "category": "widget",
         "units": {
           "length": "Length",
           "area": "Area",
@@ -143,9 +170,11 @@
         }
       },
       "imageConverter": {
+        "id": "imageConverter",
+        "icon": "image",
         "label": "Image Converter",
         "description": "Convert images between different formats",
-        "icon": "image",
+        "category": "widget",
         "formats": {
           "input": "Input Format",
           "output": "Output Format",
@@ -169,9 +198,11 @@
         }
       },
       "exchangeRate": {
+        "id": "exchangeRate",
         "label": "Exchange Rate",
         "description": "Simple and quick currency conversion tool",
         "icon": "currency_exchange",
+        "category": "widget",
         "formats": {
           "from": "Source Currency",
           "to": "Target Currency",
@@ -188,6 +219,22 @@
             "license": "CC BY-SA 3.0 TW License",
             "comply": "and complies with"
           }
+        }
+      },
+      "articleGenerator": {
+        "id": "articleGenerator",
+        "icon": "article",
+        "label": "Article Generator",
+        "description": "Generate a 200-word article from your title",
+        "category": "ai",
+        "formats": {
+          "title": "Article Title",
+          "placeholder": "Enter article title",
+          "generate": "Generate Article",
+          "generating": "Generating...",
+          "copy": "Copy Article",
+          "copied": "Copied",
+          "wordCount": "Will generate approximately 200 words"
         }
       }
     }
