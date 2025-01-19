@@ -15,7 +15,7 @@ interface Currency {
   lastUpdate: string;
 }
 
-class ExchangeRateService extends ApiService<ExchangeRateResponse> {
+class ExchangeRateService extends ApiService {
   constructor() {
     super("https://tw.rter.info/capi.php");
   }
@@ -33,16 +33,13 @@ class ExchangeRateService extends ApiService<ExchangeRateResponse> {
   }> {
     try {
       // 在 server side 使用 node-fetch 或 axios
-      const response = await fetch("https://tw.rter.info/capi.php", {
-        next: { revalidate: 60 }, // 每分鐘重新驗證數據
-      });
-      const data = await response.json();
+      const response = await this.get();
 
       const currencies: Currency[] = [];
       let lastUpdate = "";
 
       // 處理數據的邏輯保持不變...
-      Object.entries(data).forEach(([key, data]: [string, any]) => {
+      Object.entries(response).forEach(([key, data]: [string, any]) => {
         if (!key.startsWith("USD") || key === "USDUSD") return;
 
         const currencyCode = this.parseCurrencyCode(key);
